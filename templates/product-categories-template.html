@@ -7,6 +7,20 @@
   <meta name="description" content="Browse {{BRAND_NAME}} {{PRODUCT_TYPES}} products. Core distributor with competitive pricing and technical support. Get instant quotes.">
   <meta name="keywords" content="{{BRAND_NAME}} {{PRODUCT_TYPES}}, {{BRAND_NAME}} distributor, {{BRAND_KEYWORDS}}">
   
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{BRAND_NAME}} Products | {{BRAND_KEYWORDS}} Distributor | BeiLuo">
+  <meta property="og:description" content="Browse {{BRAND_NAME}} {{PRODUCT_TYPES}} products. Core distributor with competitive pricing and technical support.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beiluo.com/{{BRAND_SLUG}}/products/">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{BRAND_NAME}} Products | {{BRAND_KEYWORDS}} Distributor | BeiLuo">
+  <meta name="twitter:description" content="Browse {{BRAND_NAME}} {{PRODUCT_TYPES}} products. Core distributor with competitive pricing and technical support.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://beiluo.com/{{BRAND_SLUG}}/products/">
+  
   <link rel="stylesheet" href="/css/variables.css?v=1">
   <link rel="stylesheet" href="/css/base.css?v=1">
   <link rel="stylesheet" href="/css/components.css?v=1">
@@ -23,7 +37,11 @@
     "@type": "CollectionPage",
     "name": "{{BRAND_NAME}} Products",
     "description": "Complete catalog of {{BRAND_NAME}} semiconductor products",
-    "url": "https://beiluo.com/{{BRAND_SLUG}}/products/"
+    "url": "https://beiluo.com/{{BRAND_SLUG}}/products/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Shandong Beiluo Intelligent Technology Co., Ltd."
+    }
   }
   </script>
 </head>

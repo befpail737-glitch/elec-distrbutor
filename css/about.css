@@ -97,8 +97,6 @@
 
 .mission-content {
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .mission-content h2 {
@@ -114,6 +112,9 @@
   color: var(--color-text-secondary);
   font-style: italic;
   margin-bottom: var(--space-2xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mission-values {
@@ -245,10 +246,8 @@
 
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-xl);
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .cert-card {
