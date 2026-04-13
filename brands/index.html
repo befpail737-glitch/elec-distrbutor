@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Brand Partners | Electronic Components Distributors | BeiLuo</title>
+  <meta name="description" content="BeiLuo is an authorized distributor for 100+ leading electronic component brands including Infineon, Texas Instruments, STMicroelectronics, and more.">
+  <meta name="keywords" content="electronic components distributor, authorized distributor, Infineon distributor, TI distributor">
+  
+  <link rel="stylesheet" href="../css/variables.css?v=4">
+  <link rel="stylesheet" href="../css/base.css?v=4">
+  <link rel="stylesheet" href="../css/components.css?v=4">
+  <link rel="stylesheet" href="../css/navbar.css?v=4">
+  <link rel="stylesheet" href="../css/footer.css?v=4">
+  <link rel="stylesheet" href="../css/pages.css?v=4">
+  <style>
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #005ba3 100%);
+      color: white;
+      padding: var(--space-xl) 0 var(--space-3xl);
+      text-align: center;
+    }
+
+    .page-header h1 {
+      color: white;
+    }
+
+    .page-header p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Breadcrumbs styling */
+    .breadcrumbs {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #005ba3 100%);
+      padding: var(--space-xs) 0;
+      border-bottom: none;
+    }
+
+    .breadcrumbs__list {
+      justify-content: flex-start;
+    }
+
+    .breadcrumbs__list a {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .breadcrumbs__list a:hover {
+      color: white;
+    }
+
+    .breadcrumbs__list li[aria-current="page"] {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .brands-page {
+      margin-top: 0;
+      padding: var(--space-4xl) 0;
+    }
+    
+    .brands-filter {
+      display: flex;
+      gap: var(--space-md);
+      margin-bottom: var(--space-2xl);
+      flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+      padding: var(--space-sm) var(--space-md);
+      border: 1px solid var(--color-secondary-dark);
+      background: white;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--color-primary);
+      color: white;
+      border-color: var(--color-primary);
+    }
+    
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-xl);
+    }
+    
+    .brand-item {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: var(--color-text-primary);
+    }
+    
+    .brand-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .brand-item__logo {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-md);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    
+    .brand-item__name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .brand-item__desc {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-md);
+    }
+    
+    .brand-item__products {
+      font-size: 12px;
+      color: var(--color-text-tertiary);
+    }
+    
+    @media (max-width: 1024px) {
+      .brands-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .brands-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-subtitle">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link active" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li aria-current="page">Brands</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Partner Brands</h1>
+      <p>We are authorized distributors for 100+ leading electronic component manufacturers worldwide.</p>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+  <section class="brands-page">
+    <div class="container">
+      <div class="brands-filter">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">A-F</button>
+        <button class="filter-btn">G-L</button>
+        <button class="filter-btn">M-R</button>
+        <button class="filter-btn">S-Z</button>
+      </div>
+      
+      <div class="brands-grid">
+        <!-- Power Semiconductors - International -->
+        <a href="/infineon/" class="brand-item">
+          <div class="brand-item__logo">Infineon</div>
+          <h3 class="brand-item__name">Infineon Technologies</h3>
+          <p class="brand-item__desc">Leading semiconductor manufacturer specializing in power electronics and automotive semiconductors.</p>
+          <span class="brand-item__products">IGBT, MOSFET, SiC, MCU</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Fuji</div>
+          <h3 class="brand-item__name">Fuji Electric</h3>
+          <p class="brand-item__desc">Japanese manufacturer of power semiconductors and industrial equipment.</p>
+          <span class="brand-item__products">IGBT, IPM, Power Modules</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Mitsubishi</div>
+          <h3 class="brand-item__name">Mitsubishi Electric</h3>
+          <p class="brand-item__desc">Leading manufacturer of power modules and industrial semiconductors.</p>
+          <span class="brand-item__products">IGBT, IPM, DIPIPM</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">IXYS</div>
+          <h3 class="brand-item__name">IXYS / Littelfuse</h3>
+          <p class="brand-item__desc">Specialist in power semiconductors and integrated circuits.</p>
+          <span class="brand-item__products">IGBT, Thyristor, Diode, MOSFET</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Wolfspeed</div>
+          <h3 class="brand-item__name">Wolfspeed (Cree)</h3>
+          <p class="brand-item__desc">Global leader in Silicon Carbide (SiC) and Gallium Nitride (GaN) semiconductors.</p>
+          <span class="brand-item__products">SiC MOSFET, SiC Diode, GaN</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">GeneSiC</div>
+          <h3 class="brand-item__name">GeneSiC Semiconductor</h3>
+          <p class="brand-item__desc">Leading provider of Silicon Carbide power semiconductors.</p>
+          <span class="brand-item__products">SiC MOSFET, SiC Diode, SiC JFET</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Sanrex</div>
+          <h3 class="brand-item__name">Sanrex Corporation</h3>
+          <p class="brand-item__desc">Japanese manufacturer of power semiconductors and power supplies.</p>
+          <span class="brand-item__products">IGBT, Thyristor, Power Modules</span>
+        </a>
+        
+        <!-- Power Semiconductors - Chinese -->
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">CRMicro</div>
+          <h3 class="brand-item__name">CRMicro</h3>
+          <p class="brand-item__desc">Leading Chinese power semiconductor manufacturer.</p>
+          <span class="brand-item__products">IGBT, MOSFET, FRD</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">CRRC</div>
+          <h3 class="brand-item__name">CRRC Times Electric</h3>
+          <p class="brand-item__desc">Chinese railway and power electronics technology leader.</p>
+          <span class="brand-item__products">IGBT, Power Modules</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Macmic</div>
+          <h3 class="brand-item__name">Macmic Science & Technology</h3>
+          <p class="brand-item__desc">Chinese manufacturer of power semiconductor devices.</p>
+          <span class="brand-item__products">IGBT, FRED, Thyristor</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Starpower</div>
+          <h3 class="brand-item__name">Starpower Semiconductor</h3>
+          <p class="brand-item__desc">Chinese IGBT and power module manufacturer.</p>
+          <span class="brand-item__products">IGBT Modules, IPM</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">BYD</div>
+          <h3 class="brand-item__name">BYD Semiconductor</h3>
+          <p class="brand-item__desc">Leading Chinese automotive and power semiconductor manufacturer.</p>
+          <span class="brand-item__products">IGBT, SiC, MCU, Sensor</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Inventchip</div>
+          <h3 class="brand-item__name">Inventchip Technology</h3>
+          <p class="brand-item__desc">Chinese SiC power semiconductor innovator.</p>
+          <span class="brand-item__products">SiC MOSFET, SiC Module</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Yangjie</div>
+          <h3 class="brand-item__name">Yangjie Electronic</h3>
+          <p class="brand-item__desc">Chinese discrete semiconductor manufacturer.</p>
+          <span class="brand-item__products">Diode, MOSFET, IGBT</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Silan</div>
+          <h3 class="brand-item__name">Silan Microelectronics</h3>
+          <p class="brand-item__desc">Leading Chinese IDM semiconductor company.</p>
+          <span class="brand-item__products">Power IC, MCU, MEMS</span>
+        </a>
+        
+        <!-- Drivers & Controllers -->
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">PI</div>
+          <h3 class="brand-item__name">Power Integrations</h3>
+          <p class="brand-item__desc">Leading provider of high-voltage ICs for power conversion.</p>
+          <span class="brand-item__products">Gate Driver, Power IC</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Firstack</div>
+          <h3 class="brand-item__name">Firstack Intelligent</h3>
+          <p class="brand-item__desc">Chinese digital gate driver solution provider.</p>
+          <span class="brand-item__products">Digital Gate Driver</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Bronze</div>
+          <h3 class="brand-item__name">Bronze Technologies</h3>
+          <p class="brand-item__desc">Power semiconductor and driver solution provider.</p>
+          <span class="brand-item__products">Gate Driver, Power Module</span>
+        </a>
+        
+        <!-- Sensors -->
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">LEM</div>
+          <h3 class="brand-item__name">LEM International</h3>
+          <p class="brand-item__desc">Global leader in current and voltage transducers.</p>
+          <span class="brand-item__products">Current Sensor, Voltage Sensor</span>
+        </a>
+        
+        <!-- Capacitors -->
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Faratronic</div>
+          <h3 class="brand-item__name">Faratronic</h3>
+          <p class="brand-item__desc">Leading Chinese film capacitor manufacturer.</p>
+          <span class="brand-item__products">Film Capacitor, DC-Link Capacitor</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Jianghai</div>
+          <h3 class="brand-item__name">Jianghai Capacitor</h3>
+          <p class="brand-item__desc">Chinese aluminum electrolytic capacitor manufacturer.</p>
+          <span class="brand-item__products">Aluminum Capacitor, Film Capacitor</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Aishi</div>
+          <h3 class="brand-item__name">Aishi Electronics</h3>
+          <p class="brand-item__desc">Chinese capacitor manufacturer for industrial applications.</p>
+          <span class="brand-item__products">Aluminum Capacitor, Film Capacitor</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Samyoung</div>
+          <h3 class="brand-item__name">Samyoung (三莹)</h3>
+          <p class="brand-item__desc">Korean aluminum electrolytic capacitor manufacturer.</p>
+          <span class="brand-item__products">Aluminum Capacitor</span>
+        </a>
+        
+        <!-- Relays -->
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Hongfa</div>
+          <h3 class="brand-item__name">Hongfa Technology</h3>
+          <p class="brand-item__desc">World's leading relay manufacturer.</p>
+          <span class="brand-item__products">Power Relay, Signal Relay, HV Relay</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Panasonic</div>
+          <h3 class="brand-item__name">Panasonic</h3>
+          <p class="brand-item__desc">Japanese electronics manufacturer with quality relay products.</p>
+          <span class="brand-item__products">Relay, Capacitor, Sensor</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Cosmo</div>
+          <h3 class="brand-item__name">Cosmo Electronics (冠西)</h3>
+          <p class="brand-item__desc">Taiwanese optocoupler and relay manufacturer.</p>
+          <span class="brand-item__products">Optocoupler, Relay, MOSFET</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Lite-On</div>
+          <h3 class="brand-item__name">Lite-On Technology (光宝)</h3>
+          <p class="brand-item__desc">Taiwanese optoelectronics and power component manufacturer.</p>
+          <span class="brand-item__products">Optocoupler, LED, Power</span>
+        </a>
+        
+        <!-- Fuses -->
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">SinoFuse</div>
+          <h3 class="brand-item__name">SinoFuse</h3>
+          <p class="brand-item__desc">Chinese fuse and circuit protection manufacturer.</p>
+          <span class="brand-item__products">Fuse, Circuit Protection</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Bussmann</div>
+          <h3 class="brand-item__name">Eaton Bussmann</h3>
+          <p class="brand-item__desc">Global leader in circuit protection solutions.</p>
+          <span class="brand-item__products">Fuse, Circuit Breaker</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Littelfuse</div>
+          <h3 class="brand-item__name">Littelfuse</h3>
+          <p class="brand-item__desc">Leading manufacturer of circuit protection products.</p>
+          <span class="brand-item__products">Fuse, TVS, PTC, Varistor</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Mersen</div>
+          <h3 class="brand-item__name">Mersen (美尔森)</h3>
+          <p class="brand-item__desc">Global expert in electrical power and advanced materials.</p>
+          <span class="brand-item__products">Fuse, Surge Protection</span>
+        </a>
+        
+        <!-- MCU & Wireless -->
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Espressif</div>
+          <h3 class="brand-item__name">Espressif Systems (乐鑫)</h3>
+          <p class="brand-item__desc">Leading Chinese wireless MCU and IoT solution provider.</p>
+          <span class="brand-item__products">WiFi MCU, Bluetooth MCU</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">GigaDevice</div>
+          <h3 class="brand-item__name">GigaDevice (兆易创新)</h3>
+          <p class="brand-item__desc">Leading Chinese MCU and memory solution provider.</p>
+          <span class="brand-item__products">MCU, Flash Memory, Sensor</span>
+        </a>
+        
+        <!-- Power Supplies -->
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Mornsun</div>
+          <h3 class="brand-item__name">Mornsun Power (金升阳)</h3>
+          <p class="brand-item__desc">Leading Chinese DC-DC and AC-DC power module manufacturer.</p>
+          <span class="brand-item__products">DC-DC Converter, AC-DC Power</span>
+        </a>
+        
+        <!-- International MCU/Analog -->
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">TI</div>
+          <h3 class="brand-item__name">Texas Instruments</h3>
+          <p class="brand-item__desc">Global leader in analog and embedded processing semiconductors.</p>
+          <span class="brand-item__products">Analog, MCU, Power Management</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">ST</div>
+          <h3 class="brand-item__name">STMicroelectronics</h3>
+          <p class="brand-item__desc">Leading integrated device manufacturer serving all electronics segments.</p>
+          <span class="brand-item__products">MCU, Power, Sensors, Analog</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">NXP</div>
+          <h3 class="brand-item__name">NXP Semiconductors</h3>
+          <p class="brand-item__desc">Leading provider of secure connectivity solutions for embedded applications.</p>
+          <span class="brand-item__products">MCU, RF, Power, Security</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Microchip</div>
+          <h3 class="brand-item__name">Microchip Technology</h3>
+          <p class="brand-item__desc">Provider of smart, connected and secure embedded control solutions.</p>
+          <span class="brand-item__products">MCU, Analog, FPGA, Memory</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">ON</div>
+          <h3 class="brand-item__name">ON Semiconductor</h3>
+          <p class="brand-item__desc">Leading supplier of semiconductor-based solutions for energy-efficient electronics.</p>
+          <span class="brand-item__products">Power, Sensors, Analog</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Renesas</div>
+          <h3 class="brand-item__name">Renesas Electronics</h3>
+          <p class="brand-item__desc">Global leader in microcontrollers, analog, power and SoC products.</p>
+          <span class="brand-item__products">MCU, Analog, Power, SoC</span>
+        </a>
+        
+        <a href="#" class="brand-item">
+          <div class="brand-item__logo">Analog</div>
+          <h3 class="brand-item__name">Analog Devices</h3>
+          <p class="brand-item__desc">Leading global high-performance analog technology company.</p>
+          <span class="brand-item__products">Analog, Power, RF, Sensors</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+          <p class="footer__description">Your trusted partner for genuine electronic components. Core distributor of 100+ brands with local stock and technical support.</p>
+        </div>
+        
+        <nav class="footer__links" aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+        
+        <div class="footer__social">
+          <h4>Follow Us</h4>
+          <div class="footer__social-links">
+            <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#" aria-label="Twitter" target="_blank" rel="noopener">Twitter</a>
+            <a href="#" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

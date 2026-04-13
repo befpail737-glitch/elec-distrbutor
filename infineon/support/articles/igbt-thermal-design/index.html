@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IGBT Module Thermal Design Guidelines | Infineon Technical Article | BeiLuo</title>
+  <meta name="description" content="Comprehensive guide to thermal management for IGBT modules. Learn about heatsink selection, thermal interface materials, and cooling system design.">
+  <meta name="keywords" content="IGBT thermal design, heatsink selection, thermal interface material, IGBT cooling, power module thermal">
+  <link rel="stylesheet" href="/css/variables.css?v=2">
+  <link rel="stylesheet" href="/css/base.css?v=2">
+  <link rel="stylesheet" href="/css/components.css?v=2">
+  <link rel="stylesheet" href="/css/navbar.css?v=2">
+  <link rel="stylesheet" href="/css/footer.css?v=2">
+  <link rel="stylesheet" href="/css/pages.css?v=2">
+  <link rel="stylesheet" href="/css/brand-tabs.css?v=2">
+  <link rel="stylesheet" href="/infineon/css/brand.css?v=2">
+  <link rel="stylesheet" href="/infineon/css/support.css?v=2">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "IGBT Module Thermal Design Guidelines",
+    "description": "Comprehensive guide to thermal management for IGBT modules",
+    "author": {
+      "@type": "Person",
+      "name": "Michael Chen"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BeiLuo Electronics"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-tagline">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link active" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Brand Tabs -->
+  <nav class="brand-tabs" aria-label="Infineon navigation">
+    <div class="container">
+      <div class="brand-tabs__inner">
+        <a href="/infineon/" class="brand-tabs__link">About Brand</a>
+        <a href="/infineon/products/" class="brand-tabs__link">Products</a>
+        <a href="/infineon/solutions/" class="brand-tabs__link">Solutions</a>
+        <a href="/infineon/support/" class="brand-tabs__link active">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/brands/">Brands</a></li>
+          <li><a href="/infineon/">Infineon</a></li>
+          <li><a href="/infineon/support/">Support</a></li>
+          <li><a href="/infineon/support/application-notes/">Application Notes</a></li>
+          <li aria-current="page">IGBT Thermal Design</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Article Detail -->
+  <section class="tech-article-detail">
+    <div class="container">
+      <div class="article-layout">
+        <article class="article-main">
+          <header class="article-header">
+            <div class="article-header__meta">
+              <span class="tech-article__category">Application Note</span>
+              <span class="tech-article__date">January 15, 2024</span>
+            </div>
+            <h1>IGBT Module Thermal Design Guidelines</h1>
+            <div class="article-author">
+              <div class="article-author__avatar">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="23" fill="#e9ecef"/>
+                  <circle cx="24" cy="18" r="8" fill="#adb5bd"/>
+                  <path d="M10 42c0-10 6-18 14-18s14 8 14 18" fill="#adb5bd"/>
+                </svg>
+              </div>
+              <div class="article-author__info">
+                <h4>Michael Chen</h4>
+                <p>Senior FAE - Power Electronics | 15+ years experience</p>
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <p>Proper thermal management is critical for the reliable operation of IGBT power modules. This application note provides comprehensive guidelines for designing effective thermal management systems, including heatsink selection, thermal interface material (TIM) selection, and cooling system design considerations.</p>
+
+            <h2 id="section-1">1. Understanding Thermal Resistance</h2>
+            <p>The thermal performance of an IGBT module is characterized by thermal resistance, which represents the temperature rise per unit of power dissipation. The total thermal resistance from junction to ambient consists of several components:</p>
+            
+            <ul>
+              <li><strong>Rth(j-c)</strong>: Junction-to-case thermal resistance (provided in datasheet)</li>
+              <li><strong>Rth(c-s)</strong>: Case-to-heatsink thermal resistance (depends on TIM)</li>
+              <li><strong>Rth(s-a)</strong>: Heatsink-to-ambient thermal resistance (depends on heatsink design)</li>
+            </ul>
+
+            <p>The total thermal resistance is calculated as:</p>
+            <pre><code>Rth(j-a) = Rth(j-c) + Rth(c-s) + Rth(s-a)</code></pre>
+
+            <h2 id="section-2">2. Heatsink Selection</h2>
+            <p>When selecting a heatsink for your IGBT module, consider the following factors:</p>
+
+            <h3>2.1 Thermal Requirements</h3>
+            <p>Calculate the maximum allowable thermal resistance of the heatsink using the following equation:</p>
+            <pre><code>Rth(s-a) = (Tj_max - Ta) / Pdiss - Rth(j-c) - Rth(c-s)</code></pre>
+            <p>Where:</p>
+            <ul>
+              <li>Tj_max = Maximum junction temperature (typically 150°C or 175°C)</li>
+              <li>Ta = Ambient temperature</li>
+              <li>Pdiss = Power dissipation in the module</li>
+            </ul>
+
+            <h3>2.2 Heatsink Types</h3>
+            <p>Different applications require different types of heatsinks:</p>
+            <ul>
+              <li><strong>Natural convection heatsinks:</strong> Suitable for low power applications (< 500W)</li>
+              <li><strong>Forced air cooled heatsinks:</strong> Required for medium to high power applications</li>
+              <li><strong>Liquid cooled cold plates:</strong> For high power density applications</li>
+            </ul>
+
+            <h2 id="section-3">3. Thermal Interface Materials</h2>
+            <p>The thermal interface material (TIM) plays a crucial role in the thermal path. Key considerations include:</p>
+
+            <h3>3.1 TIM Types</h3>
+            <ul>
+              <li><strong>Thermal grease:</strong> Best thermal performance, requires careful application</li>
+              <li><strong>Phase change materials:</strong> Good performance, easier application</li>
+              <li><strong>Thermal pads:</strong> Convenient but higher thermal resistance</li>
+              <li><strong>Graphite sheets:</strong> Excellent in-plane conductivity</li>
+            </ul>
+
+            <h3>3.2 Application Guidelines</h3>
+            <p>For optimal thermal performance:</p>
+            <ul>
+              <li>Apply a thin, uniform layer of thermal grease (typically 100-200 μm)</li>
+              <li>Ensure complete coverage of the contact area</li>
+              <li>Use proper mounting torque as specified in the module datasheet</li>
+              <li>Consider using thermal pads with pre-applied phase change material for production</li>
+            </ul>
+
+            <h2 id="section-4">4. Mounting Considerations</h2>
+            <p>Proper mounting is essential for both thermal and electrical performance:</p>
+
+            <ul>
+              <li>Follow the recommended mounting torque specifications</li>
+              <li>Use a star pattern when tightening multiple screws</li>
+              <li>Ensure flatness of both module baseplate and heatsink surface</li>
+              <li>Consider using a thermal gap pad if flatness cannot be guaranteed</li>
+            </ul>
+
+            <h2 id="section-5">5. Design Example</h2>
+            <p>Consider an application using FF600R12ME4 with the following conditions:</p>
+            <ul>
+              <li>Power dissipation: 800W per switch</li>
+              <li>Ambient temperature: 40°C</li>
+              <li>Maximum junction temperature: 150°C</li>
+              <li>Rth(j-c): 0.09 K/W</li>
+            </ul>
+
+            <p>Calculating required heatsink thermal resistance:</p>
+            <pre><code>Rth(s-a) = (150 - 40) / 800 - 0.09 - 0.05
+         = 0.1375 - 0.09 - 0.05
+         = 0.0575 K/W (per switch)</code></pre>
+
+            <p>For a half-bridge module with two switches, the total thermal resistance requirement would be approximately 0.029 K/W.</p>
+
+            <h2 id="section-6">6. Conclusion</h2>
+            <p>Effective thermal design is essential for reliable IGBT operation. By carefully considering thermal resistance, selecting appropriate heatsinks and TIMs, and following proper mounting procedures, designers can ensure optimal performance and long-term reliability of their power electronic systems.</p>
+
+            <blockquote>
+              <p>For specific application questions or detailed thermal modeling support, please contact our FAE team.</p>
+            </blockquote>
+          </div>
+        </article>
+
+        <aside class="article-sidebar">
+          <div class="toc-card">
+            <h4>Table of Contents</h4>
+            <ul class="toc-list">
+              <li><a href="#section-1">1. Understanding Thermal Resistance</a></li>
+              <li><a href="#section-2">2. Heatsink Selection</a></li>
+              <li><a href="#section-3">3. Thermal Interface Materials</a></li>
+              <li><a href="#section-4">4. Mounting Considerations</a></li>
+              <li><a href="#section-5">5. Design Example</a></li>
+              <li><a href="#section-6">6. Conclusion</a></li>
+            </ul>
+          </div>
+
+          <div class="download-card">
+            <h4>Related Downloads</h4>
+            <div class="download-list">
+              <a href="#" class="download-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                <span>Thermal Calculator (Excel)</span>
+              </a>
+              <a href="#" class="download-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                <span>FF600R12ME4 Datasheet</span>
+              </a>
+              <a href="#" class="download-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                <span>Mounting Instructions</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="download-card">
+            <h4>Need Help?</h4>
+            <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: var(--space-md);">Have questions about your thermal design?</p>
+            <a href="/contact/?fae=michael" class="btn btn--primary btn--small" style="width: 100%;">Contact Michael</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Articles -->
+  <section class="tech-articles" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="section-title">Related Articles</h2>
+      <div class="tech-articles__grid">
+        <article class="tech-article-card">
+          <div class="tech-article__meta">
+            <span class="tech-article__category">Application Note</span>
+            <span class="tech-article__date">Jan 10, 2024</span>
+          </div>
+          <h3 class="tech-article__title">
+            <a href="/infineon/support/articles/sic-mosfet-selection/">How to Select SiC MOSFETs for EV Applications</a>
+          </h3>
+          <p class="tech-article__excerpt">Key considerations for selecting Silicon Carbide MOSFETs in electric vehicle powertrains.</p>
+        </article>
+        <article class="tech-article-card">
+          <div class="tech-article__meta">
+            <span class="tech-article__category">Troubleshooting</span>
+            <span class="tech-article__date">Jan 5, 2024</span>
+          </div>
+          <h3 class="tech-article__title">
+            <a href="/infineon/support/articles/gate-driver-troubleshooting/">Gate Driver Troubleshooting Guide</a>
+          </h3>
+          <p class="tech-article__excerpt">Common gate driver issues and solutions for IGBT and SiC applications.</p>
+        </article>
+        <article class="tech-article-card">
+          <div class="tech-article__meta">
+            <span class="tech-article__category">Selection Guide</span>
+            <span class="tech-article__date">Dec 15, 2023</span>
+          </div>
+          <h3 class="tech-article__title">
+            <a href="/infineon/support/articles/motor-drive-igbt-selection/">IGBT Selection for Motor Drive Applications</a>
+          </h3>
+          <p class="tech-article__excerpt">Guidelines for selecting the right IGBT module for industrial motor drives.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+          <p class="footer__desc">Your trusted partner for genuine electronic components from world-leading manufacturers.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/about/">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Technical Support</h4>
+          <ul>
+            <li><a href="/infineon/support/selection-guides/">Selection Guides</a></li>
+            <li><a href="/infineon/support/application-notes/">Application Notes</a></li>
+            <li><a href="/infineon/support/troubleshooting/">Troubleshooting</a></li>
+            <li><a href="/infineon/team/">FAE Team</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

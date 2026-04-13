@@ -1,0 +1,88 @@
+{
+  "articles": [
+    {
+      "id": "beiluo-expands-inventory-2024",
+      "title": "BeiLuo Announces Major Inventory Expansion for 2024",
+      "excerpt": "BeiLuo Electronics is pleased to announce a significant expansion of our inventory, adding over 5,000 new part numbers from leading semiconductor manufacturers.",
+      "category": "company",
+      "date": "2024-01-20",
+      "author": "BeiLuo Marketing Team",
+      "featured": true,
+      "image": "/assets/news/inventory-expansion.jpg",
+      "url": "/news/beiluo-expands-inventory-2024/",
+      "tags": ["inventory", "expansion", "Infineon", "semiconductors"]
+    },
+    {
+      "id": "sic-market-growth-2024",
+      "title": "SiC Power Device Market Expected to Grow 35% in 2024",
+      "excerpt": "Market research indicates continued strong growth in the silicon carbide power device market, driven by EV adoption and renewable energy applications.",
+      "category": "industry",
+      "date": "2024-01-18",
+      "author": "Michael Chen",
+      "featured": false,
+      "image": "/assets/news/sic-market.jpg",
+      "url": "/news/sic-market-growth-2024/",
+      "tags": ["SiC", "market", "EV", "renewable energy"]
+    },
+    {
+      "id": "infineon-coolsic-g2-availability",
+      "title": "Infineon CoolSiC MOSFET G2 Now Available",
+      "excerpt": "BeiLuo now stocking the latest generation of Infineon CoolSiC MOSFETs, offering improved performance and efficiency for power applications.",
+      "category": "product",
+      "date": "2024-01-15",
+      "author": "David Wang",
+      "featured": false,
+      "image": "/assets/news/coolsic-g2.jpg",
+      "url": "/news/infineon-coolsic-g2-availability/",
+      "tags": ["Infineon", "CoolSiC", "SiC MOSFET", "new product"]
+    },
+    {
+      "id": "beiluo-fae-team-expansion",
+      "title": "BeiLuo Expands FAE Team to Better Serve Customers",
+      "excerpt": "We're excited to announce the addition of three new field application engineers specializing in automotive and power electronics.",
+      "category": "company",
+      "date": "2024-01-12",
+      "author": "HR Department",
+      "featured": false,
+      "image": "/assets/news/fae-expansion.jpg",
+      "url": "/news/beiluo-fae-team-expansion/",
+      "tags": ["FAE", "team", "expansion", "hiring"]
+    },
+    {
+      "id": "global-chip-shortage-update",
+      "title": "Global Chip Supply Chain Update Q1 2024",
+      "excerpt": "Analysis of current semiconductor supply chain conditions and outlook for power devices and microcontrollers.",
+      "category": "industry",
+      "date": "2024-01-08",
+      "author": "Lisa Zhang",
+      "featured": false,
+      "image": "/assets/news/supply-chain.jpg",
+      "url": "/news/global-chip-shortage-update/",
+      "tags": ["supply chain", "shortage", "market analysis"]
+    },
+    {
+      "id": "new-igbt-modules-stock",
+      "title": "New Infineon IGBT Modules Added to Inventory",
+      "excerpt": "Expanded selection of EconoDUAL3 and PrimePACK modules now available for immediate shipment.",
+      "category": "product",
+      "date": "2024-01-05",
+      "author": "Product Team",
+      "featured": false,
+      "image": "/assets/news/igbt-modules.jpg",
+      "url": "/news/new-igbt-modules-stock/",
+      "tags": ["Infineon", "IGBT", "EconoDUAL3", "PrimePACK"]
+    },
+    {
+      "id": "beiluo-iso-certification",
+      "title": "BeiLuo Achieves ISO 9001:2023 Certification",
+      "excerpt": "We're proud to announce our ISO 9001:2023 certification, demonstrating our commitment to quality management.",
+      "category": "company",
+      "date": "2023-12-28",
+      "author": "Quality Department",
+      "featured": false,
+      "image": "/assets/news/iso-certification.jpg",
+      "url": "/news/beiluo-iso-certification/",
+      "tags": ["ISO 9001", "certification", "quality"]
+    }
+  ]
+}

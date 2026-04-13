@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ARTICLE_TITLE}} | {{BRAND_NAME}} Technical Article | BeiLuo</title>
+  <meta name="description" content="{{ARTICLE_DESCRIPTION}} Technical guide for {{BRAND_NAME}} products by BeiLuo FAE team.">
+  <meta name="keywords" content="{{ARTICLE_KEYWORDS}}, {{BRAND_NAME}} technical support, {{BRAND_NAME}} application note">
+
+  <link rel="stylesheet" href="/css/variables.css?v=1">
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/components.css?v=1">
+  <link rel="stylesheet" href="/css/navbar.css?v=1">
+  <link rel="stylesheet" href="/css/footer.css?v=1">
+  <link rel="stylesheet" href="/css/pages.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/brand.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/support.css?v=1">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "{{ARTICLE_TITLE}}",
+    "description": "{{ARTICLE_DESCRIPTION}}",
+    "author": {
+      "@type": "Person",
+      "name": "{{AUTHOR_NAME}}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BeiLuo Electronics"
+    },
+    "datePublished": "{{PUBLISH_DATE}}",
+    "dateModified": "{{MODIFY_DATE}}"
+  }
+  </script>
+</head>
+<body>
+  <!-- ==================== MAIN NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-tagline">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link active" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== BRAND TAB NAVIGATION (二级导航) ==================== -->
+  <nav class="brand-tabs" aria-label="{{BRAND_NAME}} navigation">
+    <div class="container">
+      <div class="brand-tabs__inner">
+        <a href="/{{BRAND_SLUG}}/" class="brand-tabs__link">About Brand</a>
+        <a href="/{{BRAND_SLUG}}/products/" class="brand-tabs__link">Products</a>
+        <a href="/{{BRAND_SLUG}}/solutions/" class="brand-tabs__link">Solutions</a>
+        <a href="/{{BRAND_SLUG}}/support/" class="brand-tabs__link active">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== BREADCRUMBS ==================== -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/brands/">Brands</a></li>
+          <li><a href="/{{BRAND_SLUG}}/">{{BRAND_NAME}}</a></li>
+          <li><a href="/{{BRAND_SLUG}}/support/">Support</a></li>
+          <li><a href="/{{BRAND_SLUG}}/support/{{CATEGORY_SLUG}}/">{{CATEGORY_NAME}}</a></li>
+          <li aria-current="page">{{ARTICLE_SHORT_TITLE}}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ==================== ARTICLE HEADER ==================== -->
+  <header class="article-header">
+    <div class="container">
+      <div class="article-meta">
+        <span class="article-category">{{CATEGORY_NAME}}</span>
+        <span class="article-date">{{PUBLISH_DATE}}</span>
+        <span class="article-readtime">{{READ_TIME}} min read</span>
+      </div>
+      <h1 class="article-title">{{ARTICLE_TITLE}}</h1>
+      <p class="article-excerpt">{{ARTICLE_EXCERPT}}</p>
+
+      <!-- Author Info -->
+      <div class="article-author">
+        <div class="author-avatar">
+          <!-- {{AUTHOR_AVATAR}} -->
+          <div class="avatar-placeholder">{{AUTHOR_INITIALS}}</div>
+        </div>
+        <div class="author-info">
+          <span class="author-name">{{AUTHOR_NAME}}</span>
+          <span class="author-title">{{AUTHOR_TITLE}}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== ARTICLE CONTENT ==================== -->
+  <div class="article-layout">
+    <div class="container">
+      <div class="article-wrapper">
+        <!-- Main Article Content -->
+        <article class="article-content">
+          <!-- {{ARTICLE_BODY}} -->
+
+          <!-- Example Content Structure -->
+          <section id="section-1">
+            <h2>Introduction</h2>
+            <p>{{INTRODUCTION_PARAGRAPH}}</p>
+          </section>
+
+          <section id="section-2">
+            <h2>Key Considerations</h2>
+            <p>{{CONSIDERATIONS_PARAGRAPH}}</p>
+            <ul>
+              {{#each KEY_POINTS}}
+              <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </section>
+
+          <section id="section-3">
+            <h2>Step-by-Step Guide</h2>
+            {{#each STEPS}}
+            <div class="step-block">
+              <h3>Step {{number}}: {{title}}</h3>
+              <p>{{description}}</p>
+              <!-- {{STEP_IMAGE}} -->
+            </div>
+            {{/each}}
+          </section>
+
+          <section id="section-4">
+            <h2>Technical Specifications</h2>
+            <table class="spec-table">
+              <tbody>
+                {{#each SPECIFICATIONS}}
+                <tr>
+                  <th>{{parameter}}</th>
+                  <td>{{value}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </section>
+
+          <section id="section-5">
+            <h2>Common Issues and Solutions</h2>
+            {{#each TROUBLESHOOTING_ITEMS}}
+            <div class="troubleshoot-item">
+              <h4>Issue: {{issue}}</h4>
+              <p><strong>Solution:</strong> {{solution}}</p>
+            </div>
+            {{/each}}
+          </section>
+
+          <section id="section-6">
+            <h2>Conclusion</h2>
+            <p>{{CONCLUSION_PARAGRAPH}}</p>
+          </section>
+
+          <!-- Article Footer -->
+          <footer class="article-footer">
+            <div class="article-tags">
+              <span>Tags:</span>
+              {{#each TAGS}}
+              <a href="/tags/{{this}}/" class="article-tag">{{this}}</a>
+              {{/each}}
+            </div>
+            <div class="article-share">
+              <span>Share:</span>
+              <a href="{{SHARE_LINKEDIN}}" class="share-link" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="{{SHARE_TWITTER}}" class="share-link" target="_blank" rel="noopener">Twitter</a>
+              <a href="{{SHARE_EMAIL}}" class="share-link">Email</a>
+            </div>
+          </footer>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar">
+          <!-- Table of Contents (Sticky) -->
+          <div class="sidebar-card sidebar-card--sticky">
+            <h3>Table of Contents</h3>
+            <nav class="toc-nav">
+              <ul>
+                <li><a href="#section-1">Introduction</a></li>
+                <li><a href="#section-2">Key Considerations</a></li>
+                <li><a href="#section-3">Step-by-Step Guide</a></li>
+                <li><a href="#section-4">Technical Specifications</a></li>
+                <li><a href="#section-5">Common Issues</a></li>
+                <li><a href="#section-6">Conclusion</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Related Documents -->
+          <div class="sidebar-card">
+            <h3>Related Documents</h3>
+            <ul class="document-list">
+              {{#each RELATED_DOCUMENTS}}
+              <li>
+                <a href="{{url}}" class="document-link" target="_blank" rel="noopener">
+                  <span class="document-icon">📄</span>
+                  <span>{{title}}</span>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          <!-- Related Products -->
+          <div class="sidebar-card">
+            <h3>Related Products</h3>
+            <ul class="product-mini-list">
+              {{#each RELATED_PRODUCTS}}
+              <li>
+                <a href="{{url}}" class="product-mini">
+                  <span class="product-mini__name">{{part_number}}</span>
+                  <span class="product-mini__desc">{{short_desc}}</span>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          <!-- Contact CTA -->
+          <div class="sidebar-card sidebar-card--highlight">
+            <h3>Questions?</h3>
+            <p>Our FAE team is here to help.</p>
+            <a href="/contact/" class="btn btn--primary btn--full">Ask an Engineer</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== RELATED ARTICLES ==================== -->
+  <section class="related-articles">
+    <div class="container">
+      <h2 class="section-title">Related Articles</h2>
+      <div class="articles-grid">
+        {{#each RELATED_ARTICLES}}
+        <article class="article-card">
+          <div class="article-card__meta">
+            <span class="article-category">{{category}}</span>
+            <span class="article-date">{{date}}</span>
+          </div>
+          <h3><a href="{{url}}">{{title}}</a></h3>
+          <p>{{excerpt}}</p>
+          <a href="{{url}}" class="article-link">Read More →</a>
+        </article>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__content">
+        <h2>Need Technical Support?</h2>
+        <p>Contact our FAE team for personalized assistance.</p>
+        <a href="/contact/" class="btn btn--primary btn--large">Contact Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+        </div>
+        <nav class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/{{BRAND_SLUG}}/support/">Support</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

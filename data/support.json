@@ -1,0 +1,163 @@
+{
+  "brand": "Infineon",
+  "categories": [
+    {
+      "id": "guides",
+      "name": "Selection Guides",
+      "description": "Comprehensive guides for selecting the right Infineon components for your application",
+      "icon": "guide"
+    },
+    {
+      "id": "application-notes",
+      "name": "Application Notes",
+      "description": "Technical documentation and best practices for implementing Infineon solutions",
+      "icon": "document"
+    },
+    {
+      "id": "troubleshooting",
+      "name": "Troubleshooting",
+      "description": "Solutions to common issues and debugging techniques",
+      "icon": "wrench"
+    },
+    {
+      "id": "product-reviews",
+      "name": "Product Reviews",
+      "description": "In-depth analysis and performance evaluations of Infineon products",
+      "icon": "star"
+    }
+  ],
+  "articles": [
+    {
+      "id": "igbt-selection-guide",
+      "title": "How to Select the Right IGBT Module for Your Application",
+      "category": "guides",
+      "author": "Senior FAE - Power Applications",
+      "date": "2024-01-15",
+      "readTime": "12 min read",
+      "excerpt": "A comprehensive guide to selecting IGBT modules based on voltage, current, switching frequency, and thermal requirements. Includes decision matrices and application-specific recommendations.",
+      "content": "IGBT (Insulated Gate Bipolar Transistor) modules are the workhorses of power electronics, used in applications ranging from motor drives to renewable energy systems. Selecting the right IGBT module is critical for achieving optimal performance, reliability, and cost-effectiveness.\n\n## Key Selection Parameters\n\n### Voltage Rating\nThe IGBT voltage rating must account for the DC bus voltage plus safety margin. For 380-480V AC applications, 1200V IGBTs are typically required. For 690V systems, 1700V devices are necessary. Always include at least 1.5x safety margin above normal operating voltage.\n\n### Current Rating\nCurrent selection depends on RMS current under worst-case conditions. Consider:\n- Continuous operating current\n- Overload capability (150% for 1 minute typical)\n- Short-circuit withstand requirements\n- Thermal limitations of the package\n\n### Switching Frequency\nIGBTs are optimized for switching frequencies from 1kHz to 20kHz. Higher frequencies enable smaller magnetics but increase switching losses. For frequencies above 20kHz, consider SiC MOSFETs.\n\n## Application-Specific Recommendations\n\n### Motor Drives (VFD)\n- Voltage: 600V-1200V depending on motor voltage\n- Frequency: 4-16kHz for general purpose, up to 20kHz for servo\n- Recommended series: EconoDUAL3, EconoPACK\n\n### Solar Inverters\n- Voltage: 1200V-1700V for 1000V DC systems\n- Frequency: 8-16kHz typical\n- Recommended series: PrimePACK, EconoDUAL3\n\n### EV Traction Inverters\n- Voltage: 750V for 400V systems, 1200V for 800V systems\n- Frequency: 5-10kHz\n- Recommended series: HybridPACK Drive, CoolSiC modules\n\n## Thermal Considerations\n\nProper thermal management is essential for IGBT reliability. Key factors:\n- Junction temperature must not exceed Tj(max) - 25°C under normal operation\n- Heatsink thermal resistance calculation\n- Thermal interface material selection\n- Cooling method (natural convection, forced air, liquid)\n\n## Gate Driver Selection\n\nThe gate driver must provide:\n- Sufficient gate current for fast switching\n- DESAT protection for short-circuit protection\n- Miller clamp to prevent false turn-on\n- Isolation rated for system voltage\n\n## Conclusion\n\nSelecting the right IGBT module requires careful analysis of electrical, thermal, and mechanical requirements. BeiLuo's FAE team is available to assist with selection and provide application-specific recommendations.",
+      "tags": ["IGBT", "selection guide", "power modules", "motor drives"],
+      "relatedProducts": [
+        {
+          "name": "EconoDUAL3 IGBT",
+          "url": "/infineon/products/igbt/econodual/"
+        },
+        {
+          "name": "PrimePACK IGBT",
+          "url": "/infineon/products/igbt/primepack/"
+        }
+      ],
+      "relatedArticles": [
+        {
+          "title": "IGBT vs SiC: When to Make the Switch",
+          "url": "/infineon/support/igbt-vs-sic/"
+        }
+      ],
+      "seo": {
+        "title": "IGBT Selection Guide | Infineon Power Modules | BeiLuo",
+        "description": "Comprehensive guide to selecting Infineon IGBT modules. Voltage, current, and thermal considerations for motor drives, inverters, and power supplies.",
+        "keywords": ["IGBT selection", "Infineon IGBT guide", "power module selection", "IGBT voltage rating"]
+      }
+    },
+    {
+      "id": "sic-application-note",
+      "title": "SiC MOSFET Gate Drive Design Best Practices",
+      "category": "application-notes",
+      "author": "Senior FAE - Wide Bandgap",
+      "date": "2024-01-10",
+      "readTime": "15 min read",
+      "excerpt": "Technical deep-dive into gate driver design for SiC MOSFETs. Covers turn-on/turn-off optimization, Miller clamp implementation, and protection features specific to SiC devices.",
+      "content": "Silicon Carbide (SiC) MOSFETs offer superior switching performance compared to silicon IGBTs, but their fast switching characteristics require careful gate driver design. This application note provides best practices for designing robust gate drive circuits for Infineon CoolSiC MOSFETs.\n\n## Understanding SiC Switching Characteristics\n\nSiC MOSFETs have significantly lower switching losses than IGBTs due to:\n- No tail current during turn-off\n- Lower gate charge (Qg)\n- Faster switching transitions (dV/dt up to 100V/ns)\n\nHowever, these benefits come with design challenges:\n- Higher dV/dt can cause EMI issues\n- Crosstalk between high-side and low-side devices\n- Shoot-through risk during fast switching\n\n## Gate Drive Voltage Requirements\n\n### Turn-On Voltage\nInfineon CoolSiC MOSFETs are optimized for +15V to +18V gate drive. Higher voltage reduces Rds(on) but increases gate oxide stress. We recommend:\n- +15V for general applications\n- +18V for maximum efficiency in critical applications\n\n### Turn-Off Voltage\nNegative gate voltage (-3V to -5V) is recommended to:\n- Prevent false turn-on from dV/dt coupling\n- Ensure fast turn-off\n- Improve noise immunity\n\n## Gate Resistance Selection\n\nGate resistance (Rg) controls switching speed and must be carefully selected:\n\n### Turn-On Resistance (Rg,on)\n- Lower Rg = faster turn-on, lower switching losses\n- Higher Rg = slower turn-on, reduced EMI\n- Typical range: 2.2Ω to 10Ω\n\n### Turn-Off Resistance (Rg,off)\n- Often different from Rg,on for optimization\n- Separate path recommended for independent control\n- Typical range: 1Ω to 5Ω\n\n## Miller Clamp Implementation\n\nMiller clamp is essential for SiC MOSFETs to prevent false turn-on during fast switching. The clamp should:\n- Activate when gate voltage drops below threshold\n- Provide low-impedance path to ground\n- Handle peak currents up to several amps\n\n## PCB Layout Guidelines\n\nProper PCB layout is critical for SiC gate drive circuits:\n\n### Gate Loop Minimization\n- Keep gate drive loop area as small as possible\n- Use Kelvin connection to source pin\n- Minimize parasitic inductance in gate path\n\n### Power Loop Design\n- Minimize commutation loop inductance\n- Use low-ESR decoupling capacitors\n- Place capacitors close to device terminals\n\n## Protection Features\n\n### Overcurrent Protection\n- DESAT detection for short-circuit protection\n- Soft shutdown to prevent overvoltage\n- Response time < 2μs required\n\n### Undervoltage Lockout (UVLO)\n- Prevent operation with insufficient gate voltage\n- Hysteresis to avoid oscillation\n- +12V typical threshold for +15V drive\n\n## Testing and Validation\n\nAfter gate driver design, validate with:\n- Double-pulse testing for switching characterization\n- Thermal imaging under full load\n- EMI measurements per CISPR standards\n- Short-circuit ruggedness testing\n\n## Conclusion\n\nProper gate drive design is essential to realize the full benefits of SiC MOSFETs. Following these best practices will ensure reliable, efficient operation. Contact BeiLuo's FAE team for application-specific guidance.",
+      "tags": ["SiC", "gate driver", "CoolSiC", "application note"],
+      "relatedProducts": [
+        {
+          "name": "CoolSiC MOSFET",
+          "url": "/infineon/products/sic/"
+        },
+        {
+          "name": "EiceDRIVER",
+          "url": "/infineon/products/driver/"
+        }
+      ],
+      "relatedArticles": [
+        {
+          "title": "SiC vs IGBT: Performance Comparison",
+          "url": "/infineon/support/sic-vs-igbt/"
+        }
+      ],
+      "seo": {
+        "title": "SiC Gate Drive Design | CoolSiC Application Note | BeiLuo",
+        "description": "Best practices for SiC MOSFET gate drive design. Gate voltage, resistance selection, and PCB layout guidelines for Infineon CoolSiC devices.",
+        "keywords": ["SiC gate driver", "CoolSiC application", "SiC MOSFET design", "gate drive circuit"]
+      }
+    },
+    {
+      "id": "igbt-troubleshooting",
+      "title": "Common IGBT Failure Modes and Solutions",
+      "category": "troubleshooting",
+      "author": "FAE Engineer - Technical Support",
+      "date": "2024-01-05",
+      "readTime": "10 min read",
+      "excerpt": "Diagnostic guide for identifying and resolving common IGBT failure modes including overcurrent, overvoltage, overheating, and latch-up conditions.",
+      "content": "IGBT failures in power electronic systems can result from various causes. Understanding failure modes and their root causes is essential for designing reliable systems and troubleshooting field failures.\n\n## Failure Mode 1: Overcurrent/Short Circuit\n\n### Symptoms\n- Immediate device failure during operation\n- Gate oxide damage visible on decapsulation\n- Bond wire melting or lift-off\n\n### Root Causes\n- Load short circuit\n- Shoot-through in half-bridge configuration\n- Insufficient short-circuit withstand capability\n- Slow overcurrent protection response\n\n### Solutions\n- Implement DESAT protection with < 2μs response time\n- Use soft shutdown during fault conditions\n- Select IGBTs with appropriate short-circuit rating (10μs typical)\n- Verify gate drive timing to prevent shoot-through\n\n## Failure Mode 2: Overvoltage (Avalanche)\n\n### Symptoms\n- Device failure during turn-off\n- Characteristic avalanche damage pattern\n- May occur after multiple switching cycles\n\n### Root Causes\n- Excessive stray inductance in power loop\n- Insufficient snubber or clamp circuit\n- Fast current change (di/dt) during switching\n- Insufficient derating of voltage rating\n\n### Solutions\n- Minimize power loop inductance through proper PCB layout\n- Implement active clamping or RC snubber\n- Use IGBTs with higher voltage rating (1.5x safety margin)\n- Optimize gate resistance to control switching speed\n\n## Failure Mode 3: Overheating/Thermal Runaway\n\n### Symptoms\n- Gradual performance degradation\n- Thermal cycling damage (bond wire fatigue)\n- Eventually leads to thermal runaway\n\n### Root Causes\n- Insufficient cooling\n- High junction temperature operation\n- Improper thermal interface material application\n- Blocked airflow in forced-air cooled systems\n\n### Solutions\n- Calculate heatsink requirements based on worst-case losses\n- Implement temperature monitoring with derating\n- Use high-quality thermal interface material\n- Ensure proper mounting torque on module\n- Consider liquid cooling for high-power applications\n\n## Failure Mode 4: Gate Oxide Damage\n\n### Symptoms\n- High gate leakage current\n- Device won't turn on or turns on partially\n- Gate threshold voltage shift\n\n### Root Causes\n- Electrostatic discharge (ESD)\n- Overvoltage on gate terminal\n- Excessive gate current during switching\n- Latch-up in gate driver IC\n\n### Solutions\n- Implement ESD protection during handling\n- Use gate voltage clamping (TVS diodes)\n- Limit gate current with series resistance\n- Verify gate driver output is stable\n\n## Failure Mode 5: Latch-Up\n\n### Symptoms\n- Loss of gate control\n- Device remains on regardless of gate signal\n- May cause catastrophic failure if not protected\n\n### Root Causes\n- Excessive collector current\n- High temperature operation\n- Insufficient gate voltage during conduction\n- Parasitic thyristor activation in IGBT structure\n\n### Solutions\n- Limit maximum collector current\n- Maintain adequate gate voltage (+15V minimum)\n- Implement overcurrent protection\n- Select IGBTs with high latch-up immunity\n\n## Diagnostic Procedure\n\nWhen investigating IGBT failures:\n\n1. **Visual Inspection**\n   - Check for physical damage (burns, cracks)\n   - Inspect bond wires and connections\n   - Look for arcing or tracking marks\n\n2. **Electrical Testing**\n   - Measure gate threshold voltage\n   - Check for shorts between terminals\n   - Test blocking voltage capability\n\n3. **System Analysis**\n   - Review operating conditions at time of failure\n   - Check protection circuit operation\n   - Analyze thermal performance history\n\n## Prevention Best Practices\n\n- Design with adequate safety margins (voltage, current, temperature)\n- Implement comprehensive protection circuits\n- Use high-quality gate drivers with protection features\n- Follow proper handling procedures to prevent ESD\n- Perform thorough testing including corner cases\n\n## Conclusion\n\nMost IGBT failures can be prevented through proper design practices and protection circuits. When failures do occur, systematic analysis can identify root causes and prevent recurrence. BeiLuo's FAE team can assist with failure analysis and design review.",
+      "tags": ["IGBT", "troubleshooting", "failure analysis", "reliability"],
+      "relatedProducts": [
+        {
+          "name": "EconoDUAL3 IGBT",
+          "url": "/infineon/products/igbt/econodual/"
+        }
+      ],
+      "relatedArticles": [
+        {
+          "title": "IGBT Protection Circuit Design",
+          "url": "/infineon/support/igbt-protection/"
+        }
+      ],
+      "seo": {
+        "title": "IGBT Failure Modes | Troubleshooting Guide | BeiLuo",
+        "description": "Common IGBT failure modes and solutions. Diagnostic guide for overcurrent, overvoltage, overheating, and gate oxide damage in power modules.",
+        "keywords": ["IGBT failure", "troubleshooting IGBT", "power module failure", "IGBT reliability"]
+      }
+    },
+    {
+      "id": "coolsic-g2-review",
+      "title": "Infineon CoolSiC MOSFET G2: Performance Review and Benchmark",
+      "category": "product-reviews",
+      "author": "Senior FAE - Power Applications",
+      "date": "2024-01-20",
+      "readTime": "18 min read",
+      "excerpt": "In-depth technical review of the new CoolSiC MOSFET G2 generation. Includes switching performance benchmarks, efficiency comparisons, and application testing results.",
+      "content": "Infineon's second generation CoolSiC MOSFETs (G2) represent a significant advancement in silicon carbide technology. This comprehensive review examines the performance improvements, application benefits, and benchmark results of the new G2 series.\n\n## Product Overview\n\nThe CoolSiC G2 series builds upon the success of the first generation with:\n- Reduced on-resistance (Rds(on)) by up to 30%\n- Improved gate oxide reliability\n- Enhanced body diode performance\n- Better threshold voltage stability\n- Higher surge current capability\n\n## Test Setup and Methodology\n\n### Devices Under Test\n- IMW65R048M1H (650V, 48mΩ, G2)\n- IMW65R072M1H (650V, 72mΩ, G2)\n- Comparison with G1 equivalents and competitor devices\n\n### Test Conditions\n- DC bus voltage: 400V\n- Load current: 10A to 40A\n- Gate resistance: 2.2Ω to 10Ω\n- Temperature: 25°C and 125°C junction\n\n## Static Characterization\n\n### On-Resistance (Rds(on))\nThe G2 series delivers significant Rds(on) reduction:\n- IMW65R048M1H: 48mΩ typical at 25°C (vs 65mΩ for G1)\n- Temperature coefficient improved: 1.25x at 125°C vs 1.35x for G1\n- This translates to lower conduction losses across all operating conditions\n\n### Threshold Voltage (Vgs(th))\n- G2: 4.5V typical (tighter distribution)\n- Excellent stability over temperature and time\n- Reduced risk of false turn-on\n\n### Body Diode Performance\n- Reduced forward voltage drop: 3.2V vs 3.8V for G1\n- Improved reverse recovery characteristics\n- Better suitability for synchronous rectification\n\n## Dynamic Characterization\n
+### Switching Performance\nDouble-pulse test results show significant improvements:\n\n**Turn-On Losses (Eon)**\n- G2: 450μJ at 400V/20A (Rg=2.2Ω)\n- G1: 520μJ under same conditions\n- 13% reduction in turn-on losses\n\n**Turn-Off Losses (Eoff)**\n- G2: 280μJ at 400V/20A\n- G1: 320μJ under same conditions\n- 12% reduction in turn-off losses\n\n**Total Switching Losses**\n- G2 achieves 12-15% lower total switching losses\n- Enables higher switching frequencies or improved efficiency\n\n### dV/dt and EMI\n- dV/dt controllable through gate resistance: 20-80V/ns range\n- Lower EMI signature compared to G1 at same switching speed\n- Easier EMI filter design\n\n## Application Testing\n
+### EV Onboard Charger (11kW)\nTested in 11kW bidirectional OBC application:\n- Peak efficiency: 98.2% (vs 97.8% with G1)\n- Power density improvement: 15%\n- Thermal performance: 8°C lower junction temperature\n\n### Solar Inverter (50kW)\nThree-phase string inverter test results:\n- European efficiency: 98.9% (vs 98.5% with G1)\n- Switching frequency increased to 32kHz (from 16kHz)\n- Magnetics size and cost reduced by 25%\n\n### Motor Drive (7.5kW)\nServo drive application testing:\n- Efficiency improvement: 1.2% at rated load\n- Motor current THD reduced by 20%\n- Acoustic noise reduction due to higher switching frequency\n\n## Reliability Assessment\n
+### Gate Oxide Reliability\n- HTGB (High Temperature Gate Bias): 1000 hours passed\n- TDDB (Time Dependent Dielectric Breakdown): Superior to G1\n- Predicted lifetime: >20 years at rated conditions\n\n### Ruggedness Testing\n- Short-circuit withstand: 3μs at 400V\n- Avalanche energy: 1.2J for TO-247-3 package\n- Surge current: 4x rated current capability\n\n## Comparison with Competition\n
+Benchmarked against leading competitor SiC MOSFETs:\n\n| Parameter | CoolSiC G2 | Competitor A | Competitor B |
+|-----------|------------|--------------|--------------|
+| Rds(on) | 48mΩ | 52mΩ | 55mΩ |
+| Eon (400V/20A) | 450μJ | 480μJ | 510μJ |
+| Eoff (400V/20A) | 280μJ | 300μJ | 320μJ |
+| Vf (body diode) | 3.2V | 3.5V | 3.6V |
+\nCoolSiC G2 demonstrates leading performance across all key metrics.\n\n## Application Recommendations\n\n### Best Applications for G2\n- High-frequency power supplies (>50kHz)\n- EV onboard chargers and DC-DC converters\n- Solar inverters requiring >99% efficiency\n- Motor drives with high-dynamic performance\n- Data center power supplies\n\n### When to Use G1\n- Cost-sensitive applications where G2 performance is not required\n- Existing designs with qualified G1 devices\n- Applications with switching frequency <20kHz\n\n## Pricing and Availability\n
+CoolSiC G2 devices are available from BeiLuo with:\n- Competitive pricing (10-15% premium over G1)\n- Stock availability for popular parts\n- Technical support from FAE team\n- Evaluation boards available\n\n## Conclusion\n
+The CoolSiC MOSFET G2 generation delivers meaningful performance improvements over the already excellent G1 series. The 12-15% reduction in switching losses, combined with lower Rds(on), enables next-generation power electronics with higher efficiency and power density.\n\nFor new designs, G2 is the clear choice. For existing G1 designs, the upgrade decision depends on performance requirements and cost considerations.\n\n**Overall Rating: 9.5/10**\n\nContact BeiLuo for samples, evaluation boards, and application support.",
+      "tags": ["CoolSiC", "SiC MOSFET", "product review", "benchmark"],
+      "relatedProducts": [
+        {
+          "name": "CoolSiC MOSFET G2",
+          "url": "/infineon/products/sic/"
+        }
+      ],
+      "relatedArticles": [
+        {
+          "title": "SiC MOSFET Gate Drive Design",
+          "url": "/infineon/support/sic-gate-drive/"
+        }
+      ],
+      "seo": {
+        "title": "CoolSiC G2 Review | Infineon SiC MOSFET Benchmark | BeiLuo",
+        "description": "Technical review of Infineon CoolSiC MOSFET G2 generation. Performance benchmarks, efficiency testing, and application results.",
+        "keywords": ["CoolSiC G2 review", "Infineon SiC benchmark", "SiC MOSFET performance", "CoolSiC vs competition"]
+      }
+    }
+  ]
+}

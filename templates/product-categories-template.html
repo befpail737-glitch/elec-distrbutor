@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BRAND_NAME}} Products | {{BRAND_KEYWORDS}} Distributor | BeiLuo</title>
+  <meta name="description" content="Browse {{BRAND_NAME}} {{PRODUCT_TYPES}} products. Core distributor with competitive pricing and technical support. Get instant quotes.">
+  <meta name="keywords" content="{{BRAND_NAME}} {{PRODUCT_TYPES}}, {{BRAND_NAME}} distributor, {{BRAND_KEYWORDS}}">
+  
+  <link rel="stylesheet" href="/css/variables.css?v=1">
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/components.css?v=1">
+  <link rel="stylesheet" href="/css/navbar.css?v=1">
+  <link rel="stylesheet" href="/css/footer.css?v=1">
+  <link rel="stylesheet" href="/css/pages.css?v=1">
+  <link rel="stylesheet" href="/css/brand-tabs.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/brand.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/product-list.css?v=1">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "{{BRAND_NAME}} Products",
+    "description": "Complete catalog of {{BRAND_NAME}} semiconductor products",
+    "url": "https://beiluo.com/{{BRAND_SLUG}}/products/"
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-tagline">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link active" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Brand Tabs -->
+  <nav class="brand-tabs" aria-label="{{BRAND_NAME}} navigation">
+    <div class="container">
+      <div class="brand-tabs__inner">
+        <a href="/{{BRAND_SLUG}}/" class="brand-tabs__link">About Brand</a>
+        <a href="/{{BRAND_SLUG}}/products/" class="brand-tabs__link active">Products</a>
+        <a href="/{{BRAND_SLUG}}/solutions/" class="brand-tabs__link">Solutions</a>
+        <a href="/{{BRAND_SLUG}}/support/" class="brand-tabs__link">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/brands/">Brands</a></li>
+          <li><a href="/{{BRAND_SLUG}}/">{{BRAND_NAME}}</a></li>
+          <li aria-current="page">Products</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Product Categories Section -->
+  <section class="product-categories-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Product Center</span>
+        <h1 class="section-title">{{BRAND_NAME}} Product Categories</h1>
+        <p class="section-desc">Explore our comprehensive range of {{BRAND_NAME}} semiconductor products. Click on any category to view detailed specifications and request quotes.</p>
+      </div>
+
+      <div class="categories-grid">
+        {{CATEGORY_CARDS}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Quote Section -->
+  <section class="quick-quote">
+    <div class="container">
+      <div class="quick-quote__content">
+        <h2>Can't Find What You're Looking For?</h2>
+        <p>Our team can help you find the right {{BRAND_NAME}} product for your application. Get a personalized quote within 24 hours.</p>
+        <a href="/contact/?brand={{BRAND_SLUG}}" class="btn btn--accent btn--large">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+          <p class="footer__desc">Your trusted partner for genuine electronic components from world-leading manufacturers.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/about/">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>{{BRAND_NAME}} Products</h4>
+          <ul>
+            {{FOOTER_CATEGORY_LINKS}}
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+{
+  "brand": "Infineon",
+  "categories": [
+    {
+      "id": "igbt",
+      "name": "IGBT Modules",
+      "description": "High-power IGBT modules for industrial and automotive applications",
+      "products": [
+        {
+          "partNumber": "FF600R12ME4",
+          "series": "EconoDUAL3",
+          "voltage": "1200V",
+          "current": "600A",
+          "package": "ED3",
+          "configuration": "Half Bridge",
+          "technology": "Trench/Fieldstop IGBT4",
+          "features": [
+            "Low switching losses",
+            "High short-circuit capability",
+            "Integrated NTC temperature sensor",
+            "PressFIT contact technology"
+          ],
+          "applications": [
+            "Motor drives",
+            "UPS systems",
+            "Solar inverters",
+            "Welding equipment"
+          ],
+          "stock": {
+            "status": "in_stock",
+            "quantity": 500
+          },
+          "datasheet": "/docs/FF600R12ME4.pdf",
+          "url": "/infineon/products/igbt/ff600r12me4/"
+        },
+        {
+          "partNumber": "FF450R12ME4",
+          "series": "EconoDUAL3",
+          "voltage": "1200V",
+          "current": "450A",
+          "package": "ED3",
+          "configuration": "Half Bridge",
+          "technology": "Trench/Fieldstop IGBT4",
+          "features": [
+            "Low switching losses",
+            "High short-circuit capability",
+            "Integrated NTC temperature sensor"
+          ],
+          "applications": [
+            "Motor drives",
+            "UPS systems",
+            "Solar inverters"
+          ],
+          "stock": {
+            "status": "in_stock",
+            "quantity": 350
+          },
+          "datasheet": "/docs/FF450R12ME4.pdf",
+          "url": "/infineon/products/igbt/ff450r12me4/"
+        },
+        {
+          "partNumber": "FF300R12ME4",
+          "series": "EconoDUAL3",
+          "voltage": "1200V",
+          "current": "300A",
+          "package": "ED3",
+          "configuration": "Half Bridge",
+          "technology": "Trench/Fieldstop IGBT4",
+          "features": [
+            "Low switching losses",
+            "High short-circuit capability"
+          ],
+          "applications": [
+            "Motor drives",
+            "UPS systems"
+          ],
+          "stock": {
+            "status": "in_stock",
+            "quantity": 420
+          },
+          "datasheet": "/docs/FF300R12ME4.pdf",
+          "url": "/infineon/products/igbt/ff300r12me4/"
+        },
+        {
+          "partNumber": "FZ800R12KF5",
+          "series": "PrimePACK",
+          "voltage": "1200V",
+          "current": "800A",
+          "package": "PP3",
+          "configuration": "Half Bridge",
+          "technology": "Trench/Fieldstop IGBT4",
+          "features": [
+            "High power density",
+            "Low stray inductance",
+            "Excellent thermal performance"
+          ],
+          "applications": [
+            "High-power motor drives",
+            "Traction applications",
+            "Wind power"
+          ],
+          "stock": {
+            "status": "in_stock",
+            "quantity": 120
+          },
+          "datasheet": "/docs/FZ800R12KF5.pdf",
+          "url": "/infineon/products/igbt/fz800r12kf5/"
+        }
+      ]
+    },
+    {
+      "id": "sic",
+      "name": "SiC Devices",
+      "description": "Silicon Carbide MOSFETs and diodes for high-efficiency power systems",
+      "products": [
+        {
+          "partNumber": "IMW120R030M1H",
+          "series": "CoolSiC",
+          "voltage": "1200V",
+          "current": "36A",
+          "package": "TO-247-3",
+          "type": "SiC MOSFET",
+          "features": [
+            "Low switching losses",
+            "High switching frequency capability",
+            "Easy to drive"
+          ],
+          "applications": [
+            "EV charging",
+            "Solar inverters",
+            "UPS systems",
+            "Motor drives"
+          ],
+          "stock": {
+            "status": "in_stock",
+            "quantity": 800
+          },
+          "datasheet": "/docs/IMW120R030M1H.pdf",
+          "url": "/infineon/products/sic/imw120r030m1h/"
+        }
+      ]
+    },
+    {
+      "id": "mcu",
+      "name": "Microcontrollers",
+      "description": "AURIX, PSoC, and XMC families for automotive and industrial",
+      "products": [
+        {
+          "partNumber": "SAK-TC397XP-256F300S",
+          "series": "AURIX TC3xx",
+          "core": "TriCore",
+          "frequency": "300MHz",
+          "flash": "16MB",
+          "package": "LFBGA-292",
+          "features": [
+            "Functional safety support (ASIL-D)",
+            "Hardware security module",
+            "Multi-core architecture"
+          ],
+          "applications": [
+            "EV powertrain",
+            "ADAS",
+            "Chassis control",
+            "Body electronics"
+          ],
+          "stock": {
+            "status": "inquiry",
+            "quantity": 0
+          },
+          "datasheet": "/docs/SAK-TC397XP.pdf",
+          "url": "/infineon/products/mcu/aurix/sak-tc397xp/"
+        }
+      ]
+    }
+  ]
+}

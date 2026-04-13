@@ -1,0 +1,296 @@
+/* css/pages.css */
+
+/* Breadcrumbs */
+.breadcrumbs {
+  background: var(--color-secondary);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--color-secondary-dark);
+  margin-top: 72px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  list-style: none;
+  font-size: 14px;
+}
+
+.breadcrumbs__list li:not(:last-child)::after {
+  content: '>';
+  margin-left: var(--space-sm);
+  color: var(--color-text-tertiary);
+}
+
+.breadcrumbs__list a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.breadcrumbs__list a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumbs__list li[aria-current="page"] {
+  color: var(--color-text-tertiary);
+}
+
+/* Page Header */
+.page-header {
+  padding: var(--space-3xl) 0 var(--space-xl);
+  background: var(--color-secondary);
+}
+
+.page-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: var(--space-md);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-3xl) 0;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-secondary) 100%);
+  z-index: -1;
+}
+
+.hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-primary);
+}
+
+.hero__subtitle {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+  line-height: 1.6;
+}
+
+.hero__cta {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+/* Advantages Section */
+.advantages {
+  padding: var(--space-4xl) 0;
+  background: white;
+}
+
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.advantage-card {
+  text-align: center;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.advantage-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-md);
+  background: var(--color-primary-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.advantage-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.advantage-card p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+/* Featured Brands */
+.featured-brands {
+  padding: var(--space-4xl) 0;
+  background: var(--color-secondary);
+}
+
+.brands__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.brand-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* News Section */
+.latest-news {
+  padding: var(--space-4xl) 0;
+  background: white;
+}
+
+.news__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.news-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.news-card__image {
+  width: 100%;
+  height: 200px;
+  background: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-card__content {
+  padding: var(--space-lg);
+}
+
+.news-card__date {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.news-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.news-card p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: var(--space-4xl) 0;
+  background: var(--color-primary);
+  color: white;
+  text-align: center;
+}
+
+.cta-section__content h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.cta-section__content p {
+  font-size: 18px;
+  margin-bottom: var(--space-xl);
+  opacity: 0.9;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .advantages__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .brands__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .news__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 32px;
+  }
+  
+  .hero__cta {
+    flex-direction: column;
+  }
+  
+  .advantages__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .brands__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .news__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+}

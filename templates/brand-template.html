@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BRAND_NAME}} Distributor | Core {{BRAND_NAME}} Agent | BeiLuo</title>
+  <meta name="description" content="BeiLuo is an authorized {{BRAND_NAME}} distributor in China. We provide genuine {{BRAND_NAME}} products with technical support and competitive pricing.">
+  <meta name="keywords" content="{{BRAND_NAME}} distributor, {{BRAND_NAME}} agent, {{BRAND_KEYWORDS}}">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{BRAND_NAME}} Distributor | Core Agent | BeiLuo">
+  <meta property="og:description" content="Core {{BRAND_NAME}} distributor with genuine products and technical support">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beiluo.com/{{BRAND_SLUG}}/">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/variables.css?v=1">
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/components.css?v=1">
+  <link rel="stylesheet" href="/css/navbar.css?v=1">
+  <link rel="stylesheet" href="/css/footer.css?v=1">
+  <link rel="stylesheet" href="/css/pages.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/brand.css?v=1">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BeiLuo - {{BRAND_NAME}} Distributor",
+    "description": "Core {{BRAND_NAME}} distributor providing genuine products",
+    "url": "https://beiluo.com/{{BRAND_SLUG}}/",
+    "brand": {
+      "@type": "Brand",
+      "name": "{{BRAND_NAME}}"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- ==================== MAIN NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-tagline">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link active" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== BRAND TAB NAVIGATION (二级导航) ==================== -->
+  <nav class="brand-tabs" aria-label="{{BRAND_NAME}} navigation">
+    <div class="container">
+      <div class="brand-tabs__inner">
+        <a href="/{{BRAND_SLUG}}/" class="brand-tabs__link active">About Brand</a>
+        <a href="/{{BRAND_SLUG}}/products/" class="brand-tabs__link">Products</a>
+        <a href="/{{BRAND_SLUG}}/solutions/" class="brand-tabs__link">Solutions</a>
+        <a href="/{{BRAND_SLUG}}/support/" class="brand-tabs__link">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== BREADCRUMBS ==================== -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/brands/">Brands</a></li>
+          <li aria-current="page">{{BRAND_NAME}}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ==================== BRAND HERO SECTION ==================== -->
+  <section class="brand-hero">
+    <div class="brand-hero__bg">
+      <svg class="brand-hero__pattern" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0072ce;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#005ba3;stop-opacity:0.05" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#brandGrad)"/>
+        <g opacity="0.1">
+          <path d="M0,300 Q300,200 600,300 T1200,300" stroke="#0072ce" stroke-width="2" fill="none"/>
+          <path d="M0,350 Q300,250 600,350 T1200,350" stroke="#0072ce" stroke-width="1.5" fill="none"/>
+        </g>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="brand-hero__content">
+        <div class="brand-hero__logo">
+          <!-- {{BRAND_LOGO_SVG}} -->
+          <span class="brand-logo-placeholder">{{BRAND_NAME}}</span>
+        </div>
+        <h1 class="brand-hero__title">{{BRAND_NAME}} Distributor</h1>
+        <p class="brand-hero__subtitle">{{BRAND_TAGLINE}}</p>
+        <div class="brand-hero__badges">
+          <span class="badge badge--primary">Core Distributor</span>
+          <span class="badge badge--success">In Stock</span>
+          <span class="badge badge--info">FAE Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BRAND INTRODUCTION ==================== -->
+  <section class="brand-intro">
+    <div class="container">
+      <div class="brand-intro__grid">
+        <div class="brand-intro__content">
+          <h2>About {{BRAND_NAME}}</h2>
+          <p>{{BRAND_DESCRIPTION}}</p>
+          <p>{{BRAND_DESCRIPTION_PARAGRAPH_2}}</p>
+          <div class="brand-intro__stats">
+            <div class="stat-item">
+              <span class="stat-number">{{STAT_YEARS}}+</span>
+              <span class="stat-label">Years Partnership</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">{{STAT_PRODUCTS}}+</span>
+              <span class="stat-label">Products in Stock</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">{{STAT_FAE}}</span>
+              <span class="stat-label">FAE Engineers</span>
+            </div>
+          </div>
+        </div>
+        <div class="brand-intro__image">
+          <!-- {{BRAND_IMAGE}} -->
+          <div class="brand-image-placeholder">
+            <svg viewBox="0 0 400 300" width="100%" height="100%">
+              <rect fill="#f0f4f8" width="400" height="300"/>
+              <text x="50%" y="50%" text-anchor="middle" fill="#0072ce" font-size="24">{{BRAND_NAME}}</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRODUCT CATEGORIES ==================== -->
+  <section class="brand-categories">
+    <div class="container">
+      <h2 class="section-title">Product Categories</h2>
+      <div class="categories__grid">
+        <!-- {{PRODUCT_CATEGORIES}} -->
+        <a href="/{{BRAND_SLUG}}/products/{{CATEGORY_SLUG_1}}/" class="category-card">
+          <div class="category-card__icon">
+            <!-- {{CATEGORY_ICON_1}} -->
+          </div>
+          <h3>{{CATEGORY_NAME_1}}</h3>
+          <p>{{CATEGORY_DESC_1}}</p>
+          <span class="category-card__count">{{CATEGORY_COUNT_1}} Products →</span>
+        </a>
+        <!-- Repeat for more categories -->
+      </div>
+      <div class="text-center" style="margin-top: var(--space-xl);">
+        <a href="/{{BRAND_SLUG}}/products/" class="btn btn--primary">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOLUTIONS PREVIEW ==================== -->
+  <section class="brand-solutions">
+    <div class="container">
+      <h2 class="section-title">Industry Solutions</h2>
+      <div class="solutions__grid">
+        <!-- {{SOLUTIONS}} -->
+        <a href="/{{BRAND_SLUG}}/solutions/{{SOLUTION_SLUG_1}}/" class="solution-card">
+          <div class="solution-card__image">
+            <!-- {{SOLUTION_IMAGE_1}} -->
+          </div>
+          <div class="solution-card__content">
+            <span class="solution-card__industry">{{SOLUTION_INDUSTRY_1}}</span>
+            <h3>{{SOLUTION_NAME_1}}</h3>
+            <p>{{SOLUTION_DESC_1}}</p>
+          </div>
+        </a>
+        <!-- Repeat for more solutions -->
+      </div>
+      <div class="text-center" style="margin-top: var(--space-xl);">
+        <a href="/{{BRAND_SLUG}}/solutions/" class="btn btn--secondary">Explore Solutions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TECHNICAL SUPPORT SECTION ==================== -->
+  <section class="support-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Technical Support & Resources</h2>
+        <p class="section-subtitle">Expert resources to help you get the most out of {{BRAND_NAME}} products</p>
+      </div>
+      <div class="support-section__grid">
+        <a href="/{{BRAND_SLUG}}/support/selection-guides/" class="support-card">
+          <div class="support-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#0072ce" stroke-width="2">
+              <path d="M32 8L8 20v24l24 12 24-12V20L32 8z"/>
+              <path d="M32 32v24M32 32L8 20M32 32l24-12"/>
+            </svg>
+          </div>
+          <h3 class="support-card__title">Selection Guides</h3>
+          <p class="support-card__desc">Comprehensive guides to help you choose the right product for your application</p>
+          <span class="support-card__link">Browse Guides →</span>
+        </a>
+        <a href="/{{BRAND_SLUG}}/support/application-notes/" class="support-card">
+          <div class="support-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#0072ce" stroke-width="2">
+              <path d="M14 16h36v40H14z"/>
+              <path d="M20 24h24M20 32h24M20 40h16"/>
+              <circle cx="44" cy="44" r="12" fill="#0072ce" opacity="0.1"/>
+              <path d="M40 44l4 4 8-8" stroke="#0072ce" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="support-card__title">Application Notes</h3>
+          <p class="support-card__desc">Detailed technical documentation and best practices for implementation</p>
+          <span class="support-card__link">View Notes →</span>
+        </a>
+        <a href="/{{BRAND_SLUG}}/support/troubleshooting/" class="support-card">
+          <div class="support-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#0072ce" stroke-width="2">
+              <circle cx="32" cy="32" r="24"/>
+              <path d="M32 20v12l8 8"/>
+              <path d="M16 16l8 8"/>
+            </svg>
+          </div>
+          <h3 class="support-card__title">Troubleshooting</h3>
+          <p class="support-card__desc">Common issues and solutions to help you resolve problems quickly</p>
+          <span class="support-card__link">Get Help →</span>
+        </a>
+        <a href="/{{BRAND_SLUG}}/team/" class="support-card">
+          <div class="support-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#0072ce" stroke-width="2">
+              <path d="M32 36c6.6 0 12-5.4 12-12S38.6 12 32 12s-12 5.4-12 12 5.4 12 12 12z"/>
+              <path d="M16 52c0-8.8 7.2-16 16-16s16 7.2 16 16"/>
+              <circle cx="48" cy="20" r="8"/>
+              <path d="M56 52c0-4.4-3.6-8-8-8"/>
+            </svg>
+          </div>
+          <h3 class="support-card__title">FAE Team</h3>
+          <p class="support-card__desc">Connect with our factory-trained field application engineers</p>
+          <span class="support-card__link">Meet the Team →</span>
+        </a>
+      </div>
+      <div class="support-section__cta">
+        <a href="/{{BRAND_SLUG}}/support/" class="btn btn--primary btn--large">View All Support Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY CHOOSE US ==================== -->
+  <section class="brand-advantages">
+    <div class="container">
+      <h2 class="section-title">Why Choose BeiLuo for {{BRAND_NAME}}</h2>
+      <div class="advantages__grid">
+        <div class="advantage-item">
+          <div class="advantage-item__icon">✓</div>
+          <h3>Core Distributor</h3>
+          <p>Official authorization with direct supply chain</p>
+        </div>
+        <div class="advantage-item">
+          <div class="advantage-item__icon">✓</div>
+          <h3>Local Stock</h3>
+          <p>Deep inventory for immediate delivery</p>
+        </div>
+        <div class="advantage-item">
+          <div class="advantage-item__icon">✓</div>
+          <h3>FAE Support</h3>
+          <p>Factory-trained application engineers</p>
+        </div>
+        <div class="advantage-item">
+          <div class="advantage-item__icon">✓</div>
+          <h3>Competitive Pricing</h3>
+          <p>Best prices for volume orders</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__content">
+        <h2>Need {{BRAND_NAME}} Products?</h2>
+        <p>Contact our sales team for quotes, technical support, or inventory inquiries.</p>
+        <div class="cta-section__buttons">
+          <a href="/contact/" class="btn btn--primary btn--large">Get Quote</a>
+          <a href="/{{BRAND_SLUG}}/products/" class="btn btn--secondary btn--large">Browse Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+          <p class="footer__description">Your trusted partner for genuine electronic components.</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

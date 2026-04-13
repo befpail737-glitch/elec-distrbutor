@@ -1,0 +1,134 @@
+{
+  "brands": [
+    {
+      "id": "infineon",
+      "name": "Infineon Technologies",
+      "shortName": "Infineon",
+      "logo": "/assets/brands/infineon.svg",
+      "description": "Leading semiconductor manufacturer specializing in power electronics and automotive semiconductors",
+      "categories": ["IGBT", "MOSFET", "SiC", "MCU", "Sensors", "Gate Drivers"],
+      "featured": true,
+      "url": "/infineon/",
+      "certification": {
+        "type": "Core Distributor",
+        "number": "INF-BL-2024-001",
+        "validUntil": "2025-12-31",
+        "region": "Greater China"
+      },
+      "stats": {
+        "productsInStock": 10000,
+        "yearsPartnership": 15,
+        "quoteResponse": "24h"
+      },
+      "seo": {
+        "title": "Infineon Distributor | Core Infineon Technologies Agent | BeiLuo",
+        "description": "BeiLuo is a core Infineon distributor in China. We provide genuine Infineon IGBT, MOSFET, SiC, MCU products with technical support.",
+        "keywords": ["Infineon distributor", "Infineon agent", "Infineon IGBT", "Infineon MOSFET", "Infineon SiC"]
+      }
+    },
+    {
+      "id": "onsemi",
+      "name": "ON Semiconductor",
+      "shortName": "onsemi",
+      "logo": "/assets/brands/onsemi.svg",
+      "description": "Intelligent power and sensing technologies for automotive and industrial markets",
+      "categories": ["Power Management", "MOSFETs", "IGBTs", "Sensors", "Analog"],
+      "featured": true,
+      "url": "/onsemi/",
+      "certification": {
+        "type": "Core Distributor",
+        "number": "ONS-BL-2024-001",
+        "validUntil": "2025-12-31",
+        "region": "Greater China"
+      },
+      "stats": {
+        "productsInStock": 8000,
+        "yearsPartnership": 12,
+        "quoteResponse": "24h"
+      },
+      "seo": {
+        "title": "ON Semiconductor Distributor | Core onsemi Agent | BeiLuo",
+        "description": "Core ON Semiconductor distributor providing power management, MOSFETs, and sensing solutions.",
+        "keywords": ["ON Semiconductor distributor", "onsemi agent", "power management"]
+      }
+    },
+    {
+      "id": "st",
+      "name": "STMicroelectronics",
+      "shortName": "ST",
+      "logo": "/assets/brands/st.svg",
+      "description": "Leading semiconductor company delivering intelligent electronics solutions",
+      "categories": ["MCU", "Power", "Analog", "Sensors", "RF"],
+      "featured": true,
+      "url": "/st/",
+      "certification": {
+        "type": "Core Distributor",
+        "number": "ST-BL-2024-001",
+        "validUntil": "2025-12-31",
+        "region": "Greater China"
+      },
+      "stats": {
+        "productsInStock": 15000,
+        "yearsPartnership": 10,
+        "quoteResponse": "24h"
+      },
+      "seo": {
+        "title": "STMicroelectronics Distributor | Core ST Agent | BeiLuo",
+        "description": "Core STMicroelectronics distributor offering MCUs, power, and analog solutions.",
+        "keywords": ["STMicroelectronics distributor", "ST agent", "ST MCU"]
+      }
+    },
+    {
+      "id": "texas",
+      "name": "Texas Instruments",
+      "shortName": "TI",
+      "logo": "/assets/brands/ti.svg",
+      "description": "Global semiconductor company designing and manufacturing analog and embedded processing chips",
+      "categories": ["Analog", "Power Management", "MCU", "Sensors", "Connectivity"],
+      "featured": true,
+      "url": "/texas/",
+      "certification": {
+        "type": "Core Distributor",
+        "number": "TI-BL-2024-001",
+        "validUntil": "2025-12-31",
+        "region": "Greater China"
+      },
+      "stats": {
+        "productsInStock": 20000,
+        "yearsPartnership": 8,
+        "quoteResponse": "24h"
+      },
+      "seo": {
+        "title": "Texas Instruments Distributor | Core TI Agent | BeiLuo",
+        "description": "Core Texas Instruments distributor providing analog, power management, and embedded solutions.",
+        "keywords": ["Texas Instruments distributor", "TI agent", "TI analog"]
+      }
+    },
+    {
+      "id": "semikron",
+      "name": "SEMIKRON",
+      "shortName": "SEMIKRON",
+      "logo": "/assets/brands/semikron.svg",
+      "description": "Leading manufacturer of power modules and systems",
+      "categories": ["IGBT Modules", "Thyristors", "Diodes"],
+      "featured": false,
+      "url": "/semikron/",
+      "certification": {
+        "type": "Core Distributor",
+        "number": "SMK-BL-2024-001",
+        "validUntil": "2025-12-31",
+        "region": "Greater China"
+      },
+      "stats": {
+        "productsInStock": 3000,
+        "yearsPartnership": 5,
+        "quoteResponse": "48h"
+      },
+      "seo": {
+        "title": "SEMIKRON Distributor | Core SEMIKRON Agent | BeiLuo",
+        "description": "Core SEMIKRON distributor providing power modules and systems.",
+        "keywords": ["SEMIKRON distributor", "SEMIKRON agent", "power modules"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{SOLUTION_TITLE}} | {{BRAND_NAME}} {{INDUSTRY}} Solution | BeiLuo</title>
+  <meta name="description" content="{{SOLUTION_DESCRIPTION}} Complete {{BRAND_NAME}} semiconductor solution for {{INDUSTRY}} applications with technical support.">
+  <meta name="keywords" content="{{SOLUTION_KEYWORDS}}, {{BRAND_NAME}} {{INDUSTRY}}, {{BRAND_NAME}} solution">
+
+  <link rel="stylesheet" href="/css/variables.css?v=1">
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/components.css?v=1">
+  <link rel="stylesheet" href="/css/navbar.css?v=1">
+  <link rel="stylesheet" href="/css/footer.css?v=1">
+  <link rel="stylesheet" href="/css/pages.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/brand.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/solutions.css?v=1">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "{{SOLUTION_TITLE}}",
+    "description": "{{SOLUTION_DESCRIPTION}}",
+    "author": {
+      "@type": "Organization",
+      "name": "BeiLuo Electronics"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- ==================== MAIN NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-tagline">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link active" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== BRAND TAB NAVIGATION (二级导航) ==================== -->
+  <nav class="brand-tabs" aria-label="{{BRAND_NAME}} navigation">
+    <div class="container">
+      <div class="brand-tabs__inner">
+        <a href="/{{BRAND_SLUG}}/" class="brand-tabs__link">About Brand</a>
+        <a href="/{{BRAND_SLUG}}/products/" class="brand-tabs__link">Products</a>
+        <a href="/{{BRAND_SLUG}}/solutions/" class="brand-tabs__link active">Solutions</a>
+        <a href="/{{BRAND_SLUG}}/support/" class="brand-tabs__link">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== BREADCRUMBS ==================== -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/brands/">Brands</a></li>
+          <li><a href="/{{BRAND_SLUG}}/">{{BRAND_NAME}}</a></li>
+          <li><a href="/{{BRAND_SLUG}}/solutions/">Solutions</a></li>
+          <li aria-current="page">{{SOLUTION_NAME}}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ==================== SOLUTION HERO ==================== -->
+  <section class="solution-hero">
+    <div class="solution-hero__bg" style="background: linear-gradient(135deg, {{HERO_GRADIENT_START}}, {{HERO_GRADIENT_END}});">
+      <div class="solution-hero__pattern">
+        <!-- Abstract tech pattern SVG -->
+        <svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+          <g opacity="0.1" stroke="white" fill="none">
+            <path d="M0,200 Q300,100 600,200 T1200,200"/>
+            <path d="M0,250 Q300,150 600,250 T1200,250"/>
+            <circle cx="200" cy="200" r="50"/>
+            <circle cx="1000" cy="200" r="80"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="container">
+      <div class="solution-hero__content">
+        <span class="solution-industry">{{INDUSTRY}}</span>
+        <h1 class="solution-hero__title">{{SOLUTION_TITLE}}</h1>
+        <p class="solution-hero__subtitle">{{SOLUTION_SUBTITLE}}</p>
+        <div class="solution-hero__stats">
+          <div class="stat">
+            <span class="stat-value">{{STAT_EFFICIENCY}}%</span>
+            <span class="stat-label">Max Efficiency</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">{{STAT_POWER}}kW</span>
+            <span class="stat-label">Power Range</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">{{STAT_TEMP}}°C</span>
+            <span class="stat-label">Operating Temp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOLUTION CONTENT ==================== -->
+  <section class="solution-content">
+    <div class="container">
+      <div class="solution-layout">
+        <!-- Main Content -->
+        <main class="solution-main">
+          <!-- Overview -->
+          <div class="content-section">
+            <h2>Solution Overview</h2>
+            <p>{{SOLUTION_OVERVIEW}}</p>
+          </div>
+
+          <!-- System Architecture -->
+          <div class="content-section">
+            <h2>System Architecture</h2>
+            <div class="system-diagram">
+              <!-- {{SYSTEM_DIAGRAM_IMAGE}} -->
+              <div class="diagram-placeholder">
+                <svg viewBox="0 0 800 400" width="100%">
+                  <rect fill="#f8f9fa" width="800" height="400" rx="8"/>
+                  <text x="50%" y="50%" text-anchor="middle" fill="#6c757d">{{SYSTEM_DIAGRAM_TITLE}}</text>
+                </svg>
+              </div>
+            </div>
+            <p>{{SYSTEM_DESCRIPTION}}</p>
+          </div>
+
+          <!-- Key Components -->
+          <div class="content-section">
+            <h2>Key Components</h2>
+            <div class="components-grid">
+              {{#each KEY_COMPONENTS}}
+              <div class="component-card">
+                <div class="component-card__icon">{{icon}}</div>
+                <h4>{{name}}</h4>
+                <p>{{description}}</p>
+                <a href="{{product_link}}" class="component-link">View Product →</a>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+
+          <!-- Features & Benefits -->
+          <div class="content-section">
+            <h2>Features & Benefits</h2>
+            <div class="features-grid">
+              {{#each FEATURES}}
+              <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <div class="feature-content">
+                  <h4>{{title}}</h4>
+                  <p>{{description}}</p>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+
+          <!-- Specifications -->
+          <div class="content-section">
+            <h2>Technical Specifications</h2>
+            <table class="spec-table">
+              <tbody>
+                {{#each SPECIFICATIONS}}
+                <tr>
+                  <th>{{parameter}}</th>
+                  <td>{{value}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="solution-sidebar">
+          <!-- Contact Card -->
+          <div class="sidebar-card">
+            <h3>Talk to an Expert</h3>
+            <p>Our FAE team can help you implement this solution.</p>
+            <a href="/contact/" class="btn btn--primary btn--full">Contact FAE</a>
+          </div>
+
+          <!-- Related Products -->
+          <div class="sidebar-card">
+            <h3>Key Products</h3>
+            <ul class="product-mini-list">
+              {{#each SIDEBAR_PRODUCTS}}
+              <li>
+                <a href="{{url}}" class="product-mini">
+                  <span class="product-mini__name">{{part_number}}</span>
+                  <span class="product-mini__desc">{{short_desc}}</span>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div class="sidebar-card">
+            <h3>Resources</h3>
+            <ul class="resource-list">
+              {{#each RESOURCES}}
+              <li>
+                <a href="{{url}}" class="resource-link" target="_blank" rel="noopener">
+                  <span class="resource-icon">📄</span>
+                  <span class="resource-name">{{name}}</span>
+                </a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RELATED SOLUTIONS ==================== -->
+  <section class="related-solutions">
+    <div class="container">
+      <h2 class="section-title">Related Solutions</h2>
+      <div class="solutions__grid solutions__grid--compact">
+        {{#each RELATED_SOLUTIONS}}
+        <a href="/{{BRAND_SLUG}}/solutions/{{slug}}/" class="solution-card--compact">
+          <div class="solution-card__image--compact" style="background: linear-gradient(135deg, {{gradient_start}}, {{gradient_end}});">
+            <span class="solution-icon">{{icon}}</span>
+          </div>
+          <h4>{{title}}</h4>
+          <p>{{short_desc}}</p>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__content">
+        <h2>Ready to Implement This Solution?</h2>
+        <p>Get in touch with our FAE team for design support and component supply.</p>
+        <a href="/contact/?solution={{SOLUTION_SLUG}}" class="btn btn--primary btn--large">Request Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+        </div>
+        <nav class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

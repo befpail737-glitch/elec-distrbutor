@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BRAND_NAME}} {{CATEGORY_NAME}} | {{CATEGORY_KEYWORDS}} | BeiLuo</title>
+  <meta name="description" content="{{BRAND_NAME}} {{CATEGORY_NAME}} - {{CATEGORY_DESCRIPTION}}. Core distributor with stock availability and technical support.">
+  <meta name="keywords" content="{{BRAND_NAME}} {{CATEGORY_NAME}}, {{BRAND_NAME}} {{CATEGORY_KEYWORDS}}, {{BRAND_NAME}} distributor">
+  
+  <link rel="stylesheet" href="/css/variables.css?v=1">
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/components.css?v=1">
+  <link rel="stylesheet" href="/css/navbar.css?v=1">
+  <link rel="stylesheet" href="/css/footer.css?v=1">
+  <link rel="stylesheet" href="/css/pages.css?v=1">
+  <link rel="stylesheet" href="/css/brand-tabs.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/brand.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/product-list.css?v=1">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "{{BRAND_NAME}} {{CATEGORY_NAME}}",
+    "itemListElement": [
+      {"@type": "Product", "name": "{{PRODUCT_NAME_1}}", "description": "{{PRODUCT_DESC_1}}"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-tagline">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link active" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Brand Tabs -->
+  <nav class="brand-tabs" aria-label="{{BRAND_NAME}} navigation">
+    <div class="container">
+      <div class="brand-tabs__inner">
+        <a href="/{{BRAND_SLUG}}/" class="brand-tabs__link">About Brand</a>
+        <a href="/{{BRAND_SLUG}}/products/" class="brand-tabs__link active">Products</a>
+        <a href="/{{BRAND_SLUG}}/solutions/" class="brand-tabs__link">Solutions</a>
+        <a href="/{{BRAND_SLUG}}/support/" class="brand-tabs__link">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/brands/">Brands</a></li>
+          <li><a href="/{{BRAND_SLUG}}/">{{BRAND_NAME}}</a></li>
+          <li><a href="/{{BRAND_SLUG}}/products/">Products</a></li>
+          <li aria-current="page">{{CATEGORY_NAME}}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header" style="padding: var(--space-xl) 0 var(--space-lg);">
+    <div class="container">
+      <h1>{{BRAND_NAME}} {{CATEGORY_NAME}}</h1>
+      <p class="page-header__desc">{{CATEGORY_DESCRIPTION}}</p>
+    </div>
+  </section>
+
+  <!-- Product List -->
+  <div class="product-list-page">
+    <div class="container">
+      <div class="product-list-layout">
+        <!-- Sidebar -->
+        <aside class="product-sidebar">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Product Categories</h3>
+            <ul class="sidebar-menu">
+              <li class="sidebar-menu__item">
+                <a href="/{{BRAND_SLUG}}/products/{{CATEGORY_SLUG}}/" class="sidebar-menu__link active">{{CATEGORY_NAME}}</a>
+                <ul class="sidebar-submenu">
+                  {{SUBCATEGORY_LINKS}}
+                </ul>
+              </li>
+              {{OTHER_CATEGORIES}}
+            </ul>
+          </div>
+
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Filter by {{FILTER_NAME_1}}</h3>
+            <div class="filter-options">
+              {{FILTER_OPTIONS_1}}
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Filter by {{FILTER_NAME_2}}</h3>
+            <div class="filter-options">
+              {{FILTER_OPTIONS_2}}
+            </div>
+          </div>
+
+          <div class="sidebar-cta">
+            <h4>Need Help?</h4>
+            <p>Our FAE team can help you select the right product.</p>
+            <a href="/contact/" class="btn btn--primary btn--small">Contact Support</a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="product-main">
+          <div class="product-list-header">
+            <div>
+              <h1>{{BRAND_NAME}} {{CATEGORY_NAME}}</h1>
+              <p class="product-count-text">Showing {{DISPLAY_COUNT}} of {{TOTAL_COUNT}} products</p>
+            </div>
+            <div class="product-list-actions">
+              <select class="sort-select">
+                <option value="popular">Most Popular</option>
+                <option value="newest">Newest First</option>
+                <option value="voltage">Voltage (Low to High)</option>
+                <option value="current">Current (Low to High)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Product Table -->
+          <div class="product-table-wrapper">
+            <table class="product-table">
+              <thead>
+                <tr>
+                  <th>Part Number</th>
+                  <th>{{SPEC_HEADER_1}}</th>
+                  <th>{{SPEC_HEADER_2}}</th>
+                  <th>{{SPEC_HEADER_3}}</th>
+                  <th>{{SPEC_HEADER_4}}</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{PRODUCT_ROWS}}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <a href="{{PREV_PAGE_URL}}" class="pagination__prev {{PREV_DISABLED}}">← Previous</a>
+            <div class="pagination__numbers">
+              {{PAGINATION_NUMBERS}}
+            </div>
+            <a href="{{NEXT_PAGE_URL}}" class="pagination__next">Next →</a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+          <p class="footer__desc">Your trusted partner for genuine electronic components from world-leading manufacturers.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/about/">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>{{BRAND_NAME}} Products</h4>
+          <ul>
+            <li><a href="/{{BRAND_SLUG}}/products/{{CATEGORY_SLUG}}/">{{CATEGORY_NAME}}</a></li>
+            <li><a href="/{{BRAND_SLUG}}/products/">All Products</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

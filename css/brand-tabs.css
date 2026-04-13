@@ -1,0 +1,50 @@
+/* css/brand-tabs.css */
+
+/* Brand Tabs Component */
+.brand-tabs {
+  background: var(--color-secondary);
+  border-bottom: 1px solid var(--color-secondary-dark);
+  padding: var(--space-md) 0;
+  margin-top: 72px; /* Offset for fixed navbar */
+}
+
+.brand-tabs__inner {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.brand-tabs__link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.brand-tabs__link:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.brand-tabs__link.active {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .brand-tabs__inner {
+    overflow-x: auto;
+    gap: var(--space-md);
+    padding-bottom: var(--space-sm);
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .brand-tabs__link {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BRAND_NAME}} Solutions | {{INDUSTRIES}} | BeiLuo</title>
+  <meta name="description" content="{{BRAND_NAME}}-powered solutions for {{INDUSTRIES}}. Complete semiconductor solutions with technical support.">
+  <meta name="keywords" content="{{BRAND_NAME}} solutions, {{SOLUTION_KEYWORDS}}, {{BRAND_NAME}} distributor">
+  
+  <link rel="stylesheet" href="/css/variables.css?v=1">
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/components.css?v=1">
+  <link rel="stylesheet" href="/css/navbar.css?v=1">
+  <link rel="stylesheet" href="/css/footer.css?v=1">
+  <link rel="stylesheet" href="/css/pages.css?v=1">
+  <link rel="stylesheet" href="/css/brand-tabs.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/brand.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/solutions.css?v=1">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "{{BRAND_NAME}} Solutions",
+    "description": "Industry solutions powered by {{BRAND_NAME}} technologies",
+    "url": "https://beiluo.com/{{BRAND_SLUG}}/solutions/"
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-tagline">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link active" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Brand Tabs -->
+  <nav class="brand-tabs" aria-label="{{BRAND_NAME}} navigation">
+    <div class="container">
+      <div class="brand-tabs__inner">
+        <a href="/{{BRAND_SLUG}}/" class="brand-tabs__link">About Brand</a>
+        <a href="/{{BRAND_SLUG}}/products/" class="brand-tabs__link">Products</a>
+        <a href="/{{BRAND_SLUG}}/solutions/" class="brand-tabs__link active">Solutions</a>
+        <a href="/{{BRAND_SLUG}}/support/" class="brand-tabs__link">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/brands/">Brands</a></li>
+          <li><a href="/{{BRAND_SLUG}}/">{{BRAND_NAME}}</a></li>
+          <li aria-current="page">Solutions</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="page-header__label">Solutions Center</span>
+      <h1>{{BRAND_NAME}} Industry Solutions</h1>
+      <p class="page-header__desc">Complete semiconductor solutions powered by {{BRAND_NAME}} technologies. From concept to production, we help you build efficient and reliable systems.</p>
+    </div>
+  </section>
+
+  <!-- Solutions Grid -->
+  <section class="solutions-list">
+    <div class="container">
+      <div class="solutions-filter">
+        <button class="filter-btn active" data-filter="all">All Solutions</button>
+        {{FILTER_BUTTONS}}
+      </div>
+
+      <div class="solutions-grid">
+        {{SOLUTION_CARDS}}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="solution-cta">
+    <div class="container">
+      <div class="solution-cta__content">
+        <h2>Need a Custom Solution?</h2>
+        <p>Our FAE team can help you design the optimal system architecture for your specific application requirements.</p>
+        <a href="/contact/" class="btn btn--accent btn--large">Contact Our FAE Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+          <p class="footer__desc">Your trusted partner for genuine electronic components from world-leading manufacturers.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/about/">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>{{BRAND_NAME}} Solutions</h4>
+          <ul>
+            {{FOOTER_SOLUTION_LINKS}}
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

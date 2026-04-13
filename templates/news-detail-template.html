@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ARTICLE_TITLE}} | BeiLuo News</title>
+  <meta name="description" content="{{ARTICLE_DESCRIPTION}}">
+  <meta name="keywords" content="{{ARTICLE_KEYWORDS}}">
+  <link rel="stylesheet" href="/css/variables.css?v=1">
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/components.css?v=1">
+  <link rel="stylesheet" href="/css/navbar.css?v=1">
+  <link rel="stylesheet" href="/css/footer.css?v=1">
+  <link rel="stylesheet" href="/css/pages.css?v=1">
+  <link rel="stylesheet" href="/css/news.css?v=1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "{{ARTICLE_TITLE}}",
+    "datePublished": "{{ARTICLE_DATE}}",
+    "author": {
+      "@type": "Organization",
+      "name": "BeiLuo Electronics"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BeiLuo Electronics"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-tagline">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link active" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/news/">News</a></li>
+          <li aria-current="page">{{ARTICLE_SHORT_TITLE}}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Article Header Banner -->
+  <header class="news-article-header">
+    <div class="news-article-header__bg">
+      {{ARTICLE_HEADER_BG}}
+    </div>
+    <div class="container">
+      <div class="news-article-header__content">
+        <span class="news-category {{CATEGORY_CLASS}}">{{CATEGORY_NAME}}</span>
+        <h1>{{ARTICLE_TITLE}}</h1>
+        <div class="news-article__meta">
+          <span class="news-date">{{ARTICLE_DATE}}</span>
+          <span class="news-author">By {{AUTHOR_NAME}}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="news-article">
+    <div class="container">
+      <div class="news-article__layout">
+        <div class="news-article__main">
+          <div class="news-article__content">
+            {{ARTICLE_CONTENT}}
+          </div>
+
+          <!-- Share Section -->
+          <div class="news-article__share">
+            <h4>Share this article</h4>
+            <div class="share-buttons">
+              {{SHARE_BUTTONS}}
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="news-sidebar">
+          <div class="sidebar-widget">
+            <h4>Recent News</h4>
+            <ul class="recent-news-list">
+              {{RECENT_NEWS_LIST}}
+            </ul>
+          </div>
+
+          <div class="sidebar-widget">
+            <h4>Categories</h4>
+            <ul class="category-list">
+              {{CATEGORY_LIST}}
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  <!-- Related News -->
+  <section class="related-news">
+    <div class="container">
+      <h2 class="section-title">Related Articles</h2>
+      <div class="news-grid">
+        {{RELATED_ARTICLES}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+          <p class="footer__desc">Your trusted partner for genuine electronic components from world-leading manufacturers.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/about/">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Brands</h4>
+          <ul>
+            <li><a href="/infineon/">Infineon</a></li>
+            <li><a href="/onsemi/">ON Semiconductor</a></li>
+            <li><a href="/st/">ST Microelectronics</a></li>
+            <li><a href="/texas/">Texas Instruments</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

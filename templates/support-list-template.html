@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BRAND_NAME}} Technical Support | Application Notes, Selection Guides | BeiLuo</title>
+  <meta name="description" content="{{BRAND_NAME}} technical support resources including selection guides, application notes, troubleshooting guides, and product evaluations. FAE team available.">
+  <meta name="keywords" content="{{BRAND_NAME}} technical support, application note, selection guide, {{BRAND_NAME}} FAE, troubleshooting">
+
+  <link rel="stylesheet" href="/css/variables.css?v=1">
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/components.css?v=1">
+  <link rel="stylesheet" href="/css/navbar.css?v=1">
+  <link rel="stylesheet" href="/css/footer.css?v=1">
+  <link rel="stylesheet" href="/css/pages.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/brand.css?v=1">
+  <link rel="stylesheet" href="/{{BRAND_SLUG}}/css/support.css?v=1">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "{{BRAND_NAME}} Technical Support",
+    "description": "Technical resources and support for {{BRAND_NAME}} products",
+    "url": "https://beiluo.com/{{BRAND_SLUG}}/support/"
+  }
+  </script>
+</head>
+<body>
+  <!-- ==================== MAIN NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">BeiLuo</span>
+          <span class="navbar__logo-tagline">China's Top 8 Electronic Components Distributor</span>
+        </a>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="navbar__menu" id="navbarMenu" role="menubar">
+          <li role="none"><a href="/" class="navbar__link" role="menuitem">Home</a></li>
+          <li role="none"><a href="/brands/" class="navbar__link active" role="menuitem">Brands</a></li>
+          <li role="none"><a href="/news/" class="navbar__link" role="menuitem">News</a></li>
+          <li role="none"><a href="/about/" class="navbar__link" role="menuitem">About Us</a></li>
+          <li role="none"><a href="/contact/" class="navbar__link navbar__link--cta" role="menuitem">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== BRAND TAB NAVIGATION (二级导航) ==================== -->
+  <nav class="brand-tabs" aria-label="{{BRAND_NAME}} navigation">
+    <div class="container">
+      <div class="brand-tabs__inner">
+        <a href="/{{BRAND_SLUG}}/" class="brand-tabs__link">About Brand</a>
+        <a href="/{{BRAND_SLUG}}/products/" class="brand-tabs__link">Products</a>
+        <a href="/{{BRAND_SLUG}}/solutions/" class="brand-tabs__link">Solutions</a>
+        <a href="/{{BRAND_SLUG}}/support/" class="brand-tabs__link active">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== BREADCRUMBS ==================== -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/brands/">Brands</a></li>
+          <li><a href="/{{BRAND_SLUG}}/">{{BRAND_NAME}}</a></li>
+          <li aria-current="page">Support</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ==================== SUPPORT HERO ==================== -->
+  <section class="support-hero">
+    <div class="container">
+      <div class="support-hero__content">
+        <h1>{{BRAND_NAME}} Technical Support</h1>
+        <p>Expert resources to help you select, design, and troubleshoot {{BRAND_NAME}} products. Our factory-trained FAE team is here to assist.</p>
+        <div class="support-hero__search">
+          <input type="search" placeholder="Search documentation, application notes..." class="search-input">
+          <button class="btn btn--primary">Search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SUPPORT CATEGORIES (Tab切换) ==================== -->
+  <section class="support-categories">
+    <div class="container">
+      <div class="tab-container">
+        <!-- Category Tabs -->
+        <nav class="tab-nav tab-nav--pills" role="tablist">
+          <button class="tab-nav__item active" role="tab" data-tab="selection">
+            Selection Guides
+          </button>
+          <button class="tab-nav__item" role="tab" data-tab="application">
+            Application Notes
+          </button>
+          <button class="tab-nav__item" role="tab" data-tab="troubleshooting">
+            Troubleshooting
+          </button>
+          <button class="tab-nav__item" role="tab" data-tab="evaluation">
+            Product Evaluations
+          </button>
+        </nav>
+
+        <!-- Tab Contents -->
+        <div class="tab-contents">
+          <!-- Selection Guides Tab -->
+          <div class="tab-content active" id="selection">
+            <div class="resource-grid">
+              {{#each SELECTION_GUIDES}}
+              <article class="resource-card">
+                <div class="resource-card__meta">
+                  <span class="resource-type">Selection Guide</span>
+                  <span class="resource-date">{{date}}</span>
+                </div>
+                <h3><a href="{{url}}">{{title}}</a></h3>
+                <p>{{description}}</p>
+                <div class="resource-card__footer">
+                  <span class="resource-products">Products: {{products}}</span>
+                  <a href="{{url}}" class="resource-link">Read More →</a>
+                </div>
+              </article>
+              {{/each}}
+            </div>
+          </div>
+
+          <!-- Application Notes Tab -->
+          <div class="tab-content" id="application">
+            <div class="resource-grid">
+              {{#each APPLICATION_NOTES}}
+              <article class="resource-card">
+                <div class="resource-card__meta">
+                  <span class="resource-type">Application Note</span>
+                  <span class="resource-date">{{date}}</span>
+                </div>
+                <h3><a href="{{url}}">{{title}}</a></h3>
+                <p>{{description}}</p>
+                <div class="resource-card__footer">
+                  <span class="resource-author">By {{author}}</span>
+                  <a href="{{url}}" class="resource-link">Read More →</a>
+                </div>
+              </article>
+              {{/each}}
+            </div>
+          </div>
+
+          <!-- Troubleshooting Tab -->
+          <div class="tab-content" id="troubleshooting">
+            <div class="resource-grid">
+              {{#each TROUBLESHOOTING_GUIDES}}
+              <article class="resource-card">
+                <div class="resource-card__meta">
+                  <span class="resource-type">Troubleshooting</span>
+                  <span class="resource-date">{{date}}</span>
+                </div>
+                <h3><a href="{{url}}">{{title}}</a></h3>
+                <p>{{description}}</p>
+                <div class="resource-card__footer">
+                  <span class="resource-difficulty">Level: {{difficulty}}</span>
+                  <a href="{{url}}" class="resource-link">View Guide →</a>
+                </div>
+              </article>
+              {{/each}}
+            </div>
+          </div>
+
+          <!-- Product Evaluations Tab -->
+          <div class="tab-content" id="evaluation">
+            <div class="resource-grid">
+              {{#each PRODUCT_EVALUATIONS}}
+              <article class="resource-card">
+                <div class="resource-card__meta">
+                  <span class="resource-type">Evaluation</span>
+                  <span class="resource-date">{{date}}</span>
+                </div>
+                <h3><a href="{{url}}">{{title}}</a></h3>
+                <p>{{description}}</p>
+                <div class="resource-card__footer">
+                  <span class="resource-rating">Rating: {{rating}}/5</span>
+                  <a href="{{url}}" class="resource-link">Read Review →</a>
+                </div>
+              </article>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAE TEAM ==================== -->
+  <section class="fae-team">
+    <div class="container">
+      <h2 class="section-title">Meet Our {{BRAND_NAME}} FAE Team</h2>
+      <div class="team-grid">
+        {{#each FAE_TEAM}}
+        <div class="team-card">
+          <div class="team-card__avatar">
+            <!-- {{AVATAR_IMAGE}} -->
+            <div class="avatar-placeholder">{{initials}}</div>
+          </div>
+          <h4>{{name}}</h4>
+          <p class="team-card__title">{{title}}</p>
+          <p class="team-card__specialty">Specialty: {{specialty}}</p>
+          <a href="/contact/?fae={{slug}}" class="btn btn--small btn--secondary">Contact</a>
+        </div>
+        {{/each}}
+      </div>
+      <div class="text-center" style="margin-top: var(--space-xl);">
+        <a href="/{{BRAND_SLUG}}/team/" class="btn btn--primary">View Full Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK LINKS ==================== -->
+  <section class="support-links">
+    <div class="container">
+      <h2 class="section-title">Quick Resources</h2>
+      <div class="quick-links__grid">
+        <a href="{{DATASHEET_LIBRARY_URL}}" class="quick-link-card">
+          <div class="quick-link__icon">📚</div>
+          <h4>Datasheet Library</h4>
+          <p>Complete product documentation</p>
+        </a>
+        <a href="{{DESIGN_TOOLS_URL}}" class="quick-link-card">
+          <div class="quick-link__icon">🛠️</div>
+          <h4>Design Tools</h4>
+          <p>Simulators and calculators</p>
+        </a>
+        <a href="{{VIDEO_TUTORIALS_URL}}" class="quick-link-card">
+          <div class="quick-link__icon">🎥</div>
+          <h4>Video Tutorials</h4>
+          <p>Step-by-step guides</p>
+        </a>
+        <a href="{{FAQ_URL}}" class="quick-link-card">
+          <div class="quick-link__icon">❓</div>
+          <h4>FAQ</h4>
+          <p>Frequently asked questions</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__content">
+        <h2>Can't Find What You Need?</h2>
+        <p>Our FAE team is ready to help with your technical questions.</p>
+        <div class="cta-section__buttons">
+          <a href="/contact/" class="btn btn--primary btn--large">Ask an Engineer</a>
+          <a href="https://wa.me/8615013702378" class="btn btn--secondary btn--large" target="_blank" rel="noopener">WhatsApp Support</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3 class="footer__logo">BeiLuo</h3>
+          <p class="footer__tagline">China's Top 8 Electronic Components Distributor</p>
+        </div>
+        <nav class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/brands/">Brands</a></li>
+            <li><a href="/{{BRAND_SLUG}}/products/">Products</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <h4>Contact Us</h4>
+          <p><a href="mailto:sd@elec-distributor.com">Email: sd@elec-distributor.com</a></p>
+          <p>WeChat: +86 18612518271</p>
+          <p><a href="https://wa.me/8615013702378" target="_blank" rel="noopener">WhatsApp: +86 15013702378</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Shandong Beiluo Intelligent Technology Co., Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

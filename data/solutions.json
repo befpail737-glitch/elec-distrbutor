@@ -1,0 +1,278 @@
+{
+  "brand": "Infineon",
+  "solutions": [
+    {
+      "id": "ev-powertrain",
+      "title": "EV Powertrain Solutions",
+      "category": "automotive",
+      "description": "Complete semiconductor solutions for electric vehicle powertrains, including traction inverters, onboard chargers (OBC), DC-DC converters, and battery management systems. Our solutions enable automotive manufacturers to achieve industry-leading efficiency, power density, and reliability while meeting stringent safety standards.",
+      "image": "/assets/solutions/ev-powertrain.jpg",
+      "url": "/infineon/solutions/ev-powertrain/",
+      "keyProducts": [
+        {
+          "name": "HybridPACK Drive",
+          "description": "Automotive power modules for main traction inverters",
+          "url": "/infineon/products/igbt/hybridpack/"
+        },
+        {
+          "name": "CoolSiC MOSFETs",
+          "description": "Silicon Carbide power devices for high efficiency",
+          "url": "/infineon/products/sic/"
+        },
+        {
+          "name": "AURIX MCUs",
+          "description": "Automotive microcontrollers with functional safety",
+          "url": "/infineon/products/mcu/aurix/"
+        }
+      ],
+      "specifications": {
+        "voltageRange": "750V-1200V",
+        "powerRange": "50-300kW",
+        "safetyLevel": "ASIL-D"
+      },
+      "applications": [
+        "Traction inverters",
+        "Onboard chargers",
+        "DC-DC converters",
+        "Battery management"
+      ],
+      "caseStudy": {
+        "title": "EV Manufacturer Achieves 5% Range Extension",
+        "description": "A leading EV manufacturer partnered with BeiLuo to implement Infineon CoolSiC MOSFETs in their 150kW traction inverter. The result was a 5% improvement in overall system efficiency, translating to approximately 25km additional range on a single charge. The compact SiC solution also reduced inverter size by 30%, enabling better vehicle packaging.",
+        "results": [
+          "5% efficiency improvement",
+          "25km additional range",
+          "30% size reduction",
+          "ASIL-D safety compliance"
+        ]
+      },
+      "faeInsights": {
+        "engineer": "Senior FAE - Automotive Power",
+        "quote": "When designing EV powertrains, the choice between IGBT and SiC is crucial. For 400V systems under 150kW, IGBT remains cost-effective. However, for 800V architectures or when maximum efficiency is required, SiC is the clear winner. We've helped dozens of customers make this transition successfully.",
+        "keyConsiderations": [
+          "System voltage (400V vs 800V)",
+          "Power level and efficiency targets",
+          "Thermal management requirements",
+          "Cost optimization vs performance"
+        ]
+      },
+      "decisionFramework": {
+        "title": "EV Powertrain Component Selection Guide",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Define System Requirements",
+            "description": "Determine voltage (400V/800V), power rating, and efficiency targets"
+          },
+          {
+            "step": 2,
+            "title": "Select Power Devices",
+            "description": "Choose between IGBT (cost-optimized) or SiC (performance-optimized) based on power level and efficiency requirements"
+          },
+          {
+            "step": 3,
+            "title": "Gate Driver Selection",
+            "description": "Match gate drivers with appropriate isolation, protection features, and switching speed"
+          },
+          {
+            "step": 4,
+            "title": "Control Architecture",
+            "description": "Select MCU with required safety level (ASIL-D for traction inverters) and processing capability"
+          },
+          {
+            "step": 5,
+            "title": "Thermal Design",
+            "description": "Design cooling system based on power losses and operating conditions"
+          }
+        ]
+      },
+      "seo": {
+        "title": "EV Powertrain Solutions | Infineon Electric Vehicle | BeiLuo",
+        "description": "Complete Infineon semiconductor solutions for electric vehicle powertrains. Traction inverters, onboard chargers, DC-DC converters with technical support.",
+        "keywords": ["EV powertrain", "electric vehicle", "Infineon traction inverter", "onboard charger"]
+      }
+    },
+    {
+      "id": "motor-drive",
+      "title": "Industrial Motor Drives",
+      "category": "industrial",
+      "description": "High-efficiency motor control solutions for industrial automation, featuring advanced IGBT and SiC power modules with integrated gate drivers and protection features. Our comprehensive portfolio supports applications from 1kW servo drives to 1MW industrial inverters.",
+      "image": "/assets/solutions/motor-drive.jpg",
+      "url": "/infineon/solutions/motor-drive/",
+      "keyProducts": [
+        {
+          "name": "EconoDUAL3 IGBT",
+          "description": "High-power IGBT modules for motor drives",
+          "url": "/infineon/products/igbt/econodual/"
+        },
+        {
+          "name": "EiceDRIVER",
+          "description": "Gate driver ICs with protection features",
+          "url": "/infineon/products/driver/"
+        },
+        {
+          "name": "XMC MCU",
+          "description": "Industrial microcontrollers for motor control",
+          "url": "/infineon/products/mcu/xmc/"
+        }
+      ],
+      "specifications": {
+        "powerRange": "1kW-500kW",
+        "voltageRange": "400V-690V",
+        "frequency": "Up to 20kHz"
+      },
+      "applications": [
+        "Variable frequency drives",
+        "Servo drives",
+        "CNC machines",
+        "Industrial pumps"
+      ],
+      "caseStudy": {
+        "title": "CNC Machine Builder Reduces Energy Consumption by 15%",
+        "description": "A precision CNC machine manufacturer upgraded their servo drive systems using Infineon EconoDUAL3 IGBTs and optimized gate drivers. The improved switching characteristics reduced switching losses by 20%, resulting in 15% lower overall energy consumption and reduced cooling requirements.",
+        "results": [
+          "15% energy consumption reduction",
+          "20% lower switching losses",
+          "Improved positioning accuracy",
+          "Reduced cooling system size"
+        ]
+      },
+      "faeInsights": {
+        "engineer": "Senior FAE - Industrial Drives",
+        "quote": "Motor drive design requires careful balance between switching frequency, efficiency, and EMI. For general-purpose VFDs up to 10kHz, IGBT is still the best choice. For high-performance servo drives requiring 16kHz+ switching, consider SiC or advanced IGBT4 technology.",
+        "keyConsiderations": [
+          "Switching frequency requirements",
+          "Motor type (induction, PMSM, BLDC)",
+          "Overload capability needs",
+          "EMI/EMC compliance requirements"
+        ]
+      },
+      "decisionFramework": {
+        "title": "Motor Drive Design Decision Framework",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Motor and Load Analysis",
+            "description": "Characterize motor type, power rating, torque-speed curve, and load profile"
+          },
+          {
+            "step": 2,
+            "title": "Determine Switching Frequency",
+            "description": "Select switching frequency based on motor type and acoustic requirements (4-16kHz typical)"
+          },
+          {
+            "step": 3,
+            "title": "Power Module Selection",
+            "description": "Choose IGBT or SiC modules based on power level, frequency, and efficiency targets"
+          },
+          {
+            "step": 4,
+            "title": "Gate Driver Design",
+            "description": "Select gate drivers with appropriate DESAT protection, Miller clamp, and isolation"
+          },
+          {
+            "step": 5,
+            "title": "Control Algorithm",
+            "description": "Implement FOC or V/f control based on performance requirements"
+          }
+        ]
+      },
+      "seo": {
+        "title": "Motor Drive Solutions | Infineon Industrial | BeiLuo",
+        "description": "Infineon motor drive solutions for industrial automation. IGBT modules, gate drivers, and MCUs for high-efficiency motor control.",
+        "keywords": ["motor drive", "VFD", "Infineon IGBT", "industrial automation"]
+      }
+    },
+    {
+      "id": "solar-inverter",
+      "title": "Solar Inverter Solutions",
+      "category": "renewable",
+      "description": "Power conversion solutions for photovoltaic systems, enabling maximum energy harvest and grid stability with high-efficiency SiC and IGBT power modules. Our solutions cover residential, commercial, and utility-scale applications with industry-leading efficiency.",
+      "image": "/assets/solutions/solar-inverter.jpg",
+      "url": "/infineon/solutions/solar-inverter/",
+      "keyProducts": [
+        {
+          "name": "CoolSiC MOSFET",
+          "description": "SiC devices for high-efficiency inverters",
+          "url": "/infineon/products/sic/"
+        },
+        {
+          "name": "PrimePACK IGBT",
+          "description": "High-power modules for utility-scale inverters",
+          "url": "/infineon/products/igbt/primepack/"
+        },
+        {
+          "name": "XMC MCU",
+          "description": "Controllers for MPPT and grid management",
+          "url": "/infineon/products/mcu/xmc/"
+        }
+      ],
+      "specifications": {
+        "powerRange": "3kW-350kW",
+        "efficiency": ">99%",
+        "voltageRange": "600V-1500V"
+      },
+      "applications": [
+        "Residential inverters",
+        "Commercial inverters",
+        "Utility-scale inverters",
+        "Energy storage systems"
+      ],
+      "caseStudy": {
+        "title": "Solar Inverter Manufacturer Achieves 99.1% Peak Efficiency",
+        "description": "A leading solar inverter manufacturer implemented Infineon CoolSiC MOSFETs in their 50kW three-phase string inverter. The superior switching characteristics of SiC enabled 99.1% peak efficiency and 98.8% weighted efficiency, exceeding industry standards and reducing cooling costs by 40%.",
+        "results": [
+          "99.1% peak efficiency achieved",
+          "98.8% weighted efficiency",
+          "40% cooling cost reduction",
+          "Reduced magnetics size and cost"
+        ]
+      },
+      "faeInsights": {
+        "engineer": "Senior FAE - Renewable Energy",
+        "quote": "Solar inverter design is all about efficiency. Every 0.1% improvement translates to significant energy harvest over the system lifetime. For inverters above 20kW, SiC is becoming the standard due to its superior performance at high switching frequencies.",
+        "keyConsiderations": [
+          "Efficiency targets and certification requirements",
+          "Grid code compliance (IEEE 1547, IEC 61727)",
+          "MPPT voltage range requirements",
+          "Thermal management and cooling strategy"
+        ]
+      },
+      "decisionFramework": {
+        "title": "Solar Inverter Topology Selection Guide",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Define Power and Voltage",
+            "description": "Determine inverter power rating, DC input voltage range, and AC output voltage"
+          },
+          {
+            "step": 2,
+            "title": "Select Topology",
+            "description": "Choose between H-bridge, NPC, or ANPC topology based on voltage and efficiency requirements"
+          },
+          {
+            "step": 3,
+            "title": "Power Device Selection",
+            "description": "Select SiC for high-frequency designs (>32kHz) or IGBT for cost-sensitive applications"
+          },
+          {
+            "step": 4,
+            "title": "MPPT Design",
+            "description": "Implement multi-channel MPPT with wide voltage range support"
+          },
+          {
+            "step": 5,
+            "title": "Grid Connection",
+            "description": "Design output filter and grid synchronization meeting local grid codes"
+          }
+        ]
+      },
+      "seo": {
+        "title": "Solar Inverter Solutions | Infineon PV | BeiLuo",
+        "description": "Infineon solutions for photovoltaic inverters. SiC and IGBT power modules for maximum energy harvest and grid stability.",
+        "keywords": ["solar inverter", "PV", "Infineon SiC", "photovoltaic"]
+      }
+    }
+  ]
+}
