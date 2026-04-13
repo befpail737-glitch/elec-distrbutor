@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://beiluo.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Crawl-delay for all bots
+Crawl-delay: 10
